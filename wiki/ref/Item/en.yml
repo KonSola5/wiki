@@ -1,3 +1,3 @@
 item: "#[[orange|`<`]]#[[yellow|`item`]]#[[orange|`>`]]"
-components: "#[[orange|`<`]]#[[yellow|`components`]]#[[orange|`>`]]"
-custom-data: "#[[orange|`<`]]#[[yellow|`custom-data`]]#[[orange|`>`]]"
+components: "`[`#[[orange|`<`]]#[[yellow|`components`]]#[[orange|`>`]]`]`"
+custom-data: "`{`#[[orange|`<`]]#[[yellow|`custom-data`]]#[[orange|`>`]]`}`"

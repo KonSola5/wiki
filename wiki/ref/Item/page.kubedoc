@@ -5,6 +5,6 @@ They are usually used in places where the item's components are needed.
 Various data types can wrap into `Item`s when an `Item` is expected.
 
 ## String literals
-- #[[orange|`<`]]#[[yellow|`item`]]#[[orange|`>`]]
-  - #[[orange|`<`]]#[[yellow|`item`]]#[[orange|`>`]] - A string corresponding to item ID.
+- {item}
+  - {item} - A string corresponding to item ID.
   - Example: `minecraft:diamond_sword`

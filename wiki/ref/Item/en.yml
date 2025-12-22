@@ -1,3 +1,3 @@
-item: "[[yellow|`<item>`]]"
-components: "#[[blue|`\[ `#[[yellow|`<components>`]]` \]`]]"
-custom-data: "#[[blue|`\[ `#[[yellow|`<custom-data>`]]` \]`]]"
+item: "[[yellow|`<``item``>`]]"
+components: "#[[blue|`\[ `#[[yellow|`<``components``>`]]` \]`]]"
+custom-data: "#[[blue|`\[ `#[[yellow|`<``custom-data``>`]]` \]`]]"

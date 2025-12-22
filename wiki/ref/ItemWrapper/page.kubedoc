@@ -1,0 +1,217 @@
+`ItemWrapper` is an interface containing many useful static methods for getting items from string.
+It's exposed to [[/global-scope|global scope]] as `Item`.
+
+# Static methods
+
+## `of`
+```js
+Item.of(itemStack)
+Item.of(itemStack, components)
+Item.of(itemStack, count)
+Item.of(itemStack, count, components)
+```
+**Parameters**
+- `[js]itemStack` - an [[/ref/ItemStack|ItemStack]]. Like with any other place that expects an `ItemStack`, the argument will be converted to `ItemStack` if possible.
+**Optional parameters**:
+- `[js]components` - A map of components. Can be a string representing key-value pairs: `damage=2, item_name={text:"Hello world"}`.
+- `[js]count` - An integer, representing the size of the item stack.
+**Returns**
+- A new [[/ref/ItemStack|ItemStack]].
+
+## `getList`
+
+```js
+Item.getList()
+Item.list // Bean
+```
+
+**Returns**
+- A list of most items (as [[/ref/ItemStack|ItemStack]]s) in the game. Items, that are not in a creative tab are ignored.
+
+## `getTypeList`
+
+```js
+Item.getTypeList()
+Item.typeList // Bean
+```
+
+**Returns**
+- A list of all the namespaced item IDs in the game as strings.
+
+## `getTypeToStackMap`
+
+```js
+Item.getTypeToStackMap()
+Item.typeToStackMap // Bean
+```
+
+**Returns**
+- A map between ResourceLocations and collections of variants of [[/ref/ItemStack|ItemStack]].
+
+## `getVariants`
+
+```js
+Item.getVariants(itemStack)
+```
+**Parameters**
+- `[js]itemStack` - an [[/ref/ItemStack|ItemStack]].
+**Returns**
+- A collections of variant of the given [[/ref/ItemStack|ItemStack]].
+
+## `getEmpty`
+
+```js
+Item.getEmpty()
+Item.empty // Bean
+```
+
+**Returns**
+- An [[/ref/ItemStack|ItemStack]] that represents an empty slot or air.
+
+## `fireworks`
+
+```js
+Item.fireworks(fireworksProps)
+```
+
+**Parameters**
+- `[js]fireworksProps` - a record containing fireworks properties.
+
+This parameter accepts an object in this place.
+
+```ts
+type Fireworks = {
+	explosions?: FireworkExplosion[];
+	flightDuration?: int
+}
+
+type FireworkExplosion = {
+	/** Whether the explosion has a twinkle or not. */
+	hasTwinkle?: boolean
+	/** Whether the explosion has a trail or not. */
+	hasTrail?: boolean
+	/** The shape of the firework explosion. */
+	shape?: 'small_ball' | 'large_ball' | 'star' | 'creeper' | 'burst'
+	/** 
+	 * What colors do the explosions have.
+	 * Most comfortably described as an array of hex numbers, like:
+	 * [0x2244ee, 0x33aaff]
+	 */
+	colors?: int[]
+  /** 
+	 * What colors do the explosions fade into.
+	 * Most comfortably described as an array of hex numbers, like:
+	 * [0x2244ee, 0x33aaff]
+	 */
+	fadeColors?: int[]
+}
+```
+
+**Returns**
+- A `Fireworks` object.
+
+**Example**
+```js
+Item.fireworks({
+	explosions: [
+		{
+			hasTwinkle: true,
+			hasTrail: false,
+			shape: 'creeper',
+			colors: [0xaa11ff],
+			fadeColors: [0xee33ff],
+		},
+	],
+	flightDuration: 5
+})
+```
+
+## `getItem`
+
+```js
+Item.getItem(id)
+```
+
+**Parameters**
+- `[js]id` - a ResourceLocation instance or a string representing a resource location, like `'minecraft:diamond_sword'`.
+**Returns**
+An [[/ref/Item|Item]] instance.
+
+## `getID`
+
+```js
+Item.getID(item)
+```
+
+**Parameters**
+- `[js]item` - an [[/ref/Item|Item]].
+**Returns**
+An ResourceLocation of the item.
+
+## `exists`
+
+```js
+Item.exists(id)
+```
+
+**Parameters**
+- `[js]id` - a ResourceLocation instance or a string representing a resource location, like `'minecraft:diamond_sword'`.
+**Returns**
+`true` if the item corresponding to the ID exists, `false` otherwise.
+
+## `isItem`
+
+```js
+Item.isItem(object)
+```
+
+**Parameters**
+- `[js]object` - Any object.
+**Returns**
+`true` if the object is an instance of [[/ref/ItemStack|ItemStack]], `false` otherwise.
+
+## `playerHead`
+
+```js
+Item.playerHead(nickname)
+```
+
+**Parameters**
+- `[js]nickname` - A nickname of a player to get their head.
+**Returns**
+A player head with the `minecraft:profile` data component applied.
+
+## `playerHeadfromBase64`
+
+```js
+Item.playerHeadfromBase64(uuid, textureBase64)
+```
+
+**Parameters**
+- `[js]uuid` - A non-null UUID.
+- `[js]textureBase64` - Texture data JSON to apply to the head, encoded in Base64.
+
+**Returns**
+A player head with the `minecraft:profile` data component applied.
+
+## `playerHeadFromUrl`
+
+```js
+Item.playerHeadFromUrl(url)
+```
+
+**Parameters**
+- `[js]url` - A URL leading to the texture data JSON to apply to the head.
+**Returns**
+A player head with the `minecraft:profile` data component applied.
+
+## `playerHeadfromStringHash`
+
+```js
+Item.playerHeadfromStringHash(stringHash)
+```
+
+**Parameters**
+- `[js]stringHash` - A string hash of the player to get the texture data JSON from.
+**Returns**
+A player head with the `minecraft:profile` data component applied.

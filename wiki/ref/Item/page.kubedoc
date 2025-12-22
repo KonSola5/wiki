@@ -9,4 +9,4 @@ Various data types can wrap into `Item`s when an `Item` is expected.
   - {item} - A string corresponding to item ID.
   - Example: `minecraft:diamond_sword`
 
-- #[[blue|`\[`#[[orange|`<`#[[yellow|`components`]]`>`]]`\]`]]
+- #[[blue|`\[`#[[orange|`&lt;`#[[yellow|`components`]]`&gt;`]]`\]`]]

@@ -10,8 +10,3 @@ Various data types can wrap into `Item`s when an `Item` is expected.
   - Example: `minecraft:diamond_sword`
 
 - #[[blue|`[`]]
-
-- {item}{components}
-  - {item} - A string corresponding to item ID.
-  - {components} - A list of components formatted as follows: `[key1=value1,key2=value2]`.
-  - Example: `minecraft:diamond_sword[damage=2]`

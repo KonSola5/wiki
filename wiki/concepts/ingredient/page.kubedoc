@@ -70,8 +70,6 @@ Additionally, if you want to create an `[js]Ingredient` that needs to match **mu
 
 Similarly, `[js]ingredient.except(other)` can be used on an ingredient to create a `SubtractionIngredient`, i.e. an ingredient that matches all items from the first ingredient that are NOT contained in the second ingredient. In the above example, replacing `and` with `except` would thus match any ingot NOT added by Create.
 
-Finally, you can create a SizedIngredient directly by using `[js]Ingredient.of(ingredient, amount)`.
-
 # Using Ingredients
 
 >>> danger

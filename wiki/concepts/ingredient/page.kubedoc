@@ -14,18 +14,41 @@ Ingredients are **unstacked** by default, though NeoForge provides a `SizedIngre
 KubeJS will automatically try to *wrap* any input to an ingredient in places where it is expected, but you can also use the `Ingredient` wrapper ([source](https://github.com/KubeJS-Mods/KubeJS/blob/main/src/main/java/dev/latvian/mods/kubejs/plugin/builtin/wrapper/IngredientWrapper.java)) to explicitly create them yourself, specifically using the method `[js]Ingredient.of(input)`:
 
 ## Simple Ingredients
-Most simple ingredient types may simply be written as a string, for example:
-- `''` (empty string), `'-'`, `air` and `minecraft:air` will return an ingredient that matches nothing, while `'*'` returns one that matches anything
-- any item ID (such as `'minecraft:apple'`) will create an Ingredient that matches that specific item (ignoring data)
-- any ID beginning with a `#` will match the tag with the given name, for example `'#c:ingots/iron'` will match all iron ingots
-- an item ID followed by a **component filter** (using the same syntax as [`/give`](https://minecraft.wiki/w/Argument_types#item_stack)) creates an ingredient that matches that item with the given data
+Most simple ingredient types may simply be written as string literals.
+- `''` (empty string), `'-'`, `air` and `minecraft:air` will return an ingredient that matches nothing, while `'*'` returns one that matches anything.
+- Any item ID will create an Ingredient that matches that specific item (ignoring data).
+	- Example: `[js]Ingredient.of('minecraft:apple')`
+- Any ID beginning with a `#` will match the tag with the given name, for example `'#c:ingots/iron'` will match all iron ingots.
+	- Example: `[js]Ingredient.of('#c:ingots/copper')`
+
+>>> warn
+Tag ingredients are not available in startup scripts!
+<<<
+
+- An item ID followed by a **component filter** (using the same syntax as [`/give`](https://minecraft.wiki/w/Argument_types#item_stack)) creates an ingredient that matches that item with the given components
+	- Example: `[js]Ingredient.of('minecraft:diamond_sword[damage=2]')`
 - `'@modid'` will match all items added by the mod with the given mod ID
+	- Example: `[js]Ingredient.of('@create')`
 - `%` followed by an ID will match any items contained in the creative tab with that ID
-- A regular expression (either using the JavaScript regex syntax or as a string) will match all items where the ID matches that regex, e.g. `[js]/minecraft:(gold|iron)_ingot/` will match bold Gold and Iron Ingots.
+	- Example: `[js]Ingredient.of('%minecraft:building_blocks')`
+- A regular expression (either using the JavaScript regex syntax or as a string) will match all items where the ID matches that regex.
+	- Examples:
+	- `[js]Ingredient.of(/minecraft:(gold|iron)_ingot/)`
+	- `[js]Ingredient.of('/minecraft:(gold|iron)_ingot/')`
+	- Both of these will match both Gold and Iron Ingots.
 
 >>> quote
 Use [[/tutorials/hand|`/kubejs hand`]] to get some useful string representations of the item in your hand!
 <<<
+
+## Sized ingredients
+You can create sized ingredients from regular ones by either:
+- in string syntax - prepending the ingredient with an integer number and a letter `x`.
+	- Example: `[js]Ingredient.of('2x minecraft:apple')`
+- using `[js]Ingredient.of(ingredient, count)`
+	- Example: `[js]Ingredient.of('minecraft:apple', 2)`
+- or by using the `withSize` method on ingredients.
+	- Example: `[js]Ingredient.of('minecraft:apple').withSize(2)`
 
 ## Compound Ingredients
 As mentioned above, Ingredients may also be *nested* by using lists, which means that for example,

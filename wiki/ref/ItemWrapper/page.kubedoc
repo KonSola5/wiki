@@ -215,3 +215,7 @@ Item.playerHeadfromStringHash(stringHash)
 - `[js]stringHash` - A string hash of the player to get the texture data JSON from.
 **Returns**
 A player head with the `minecraft:profile` data component applied.
+
+# Source
+
+([ItemWrapper.java](https://github.com/KubeJS-Mods/KubeJS/blob/main/src/main/java/dev/latvian/mods/kubejs/plugin/builtin/wrapper/ItemWrapper.java))

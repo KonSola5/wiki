@@ -1,4 +1,35 @@
 WIP!
+**Data components** are structured data consisting of key-value pairs, that define various properties of items and block entities, such as their name, lore, enchantments, inventory, etc. Data components can be attached to Items (and thus [/concepts/item-stack|ItemStacks]), and block entities.
+
+This article will discuss how you can create data component types and manipulate them.
+
+# Creating DataComponentMaps
+
+In places where DataComponentMap is expected (such as the second argument of `[js]Item.of(item, components)`), you can write string literals with the same string format as you would use in [`/give`](https://minecraft.wiki/w/Argument_types#item_stack).
+
+Example: `[js]Item.of('minecraft:diamond_sword', '\[damage=2,lore=[{text:"This item is cool."}]\]')`
+
+# Using DataComponentMaps
+
+In the following examples, `components` will refer to the DataComponentMap.
+
+- `[js]components.get(type)`
+  - `type` - A component type. It can be a string representing a type, for example `[js]'minecraft:lore'`.
+  - **Returns**: Value associated with the component type.
+- `[js]components.has(type)`
+  - `type` - A component type. It can be a string representing a type, for example `[js]'minecraft:lore'`.
+  - **Returns**: `true` is the component has data associated with a type, `false` otherwise.
+- `[js]components.isEmpty()`
+  - **Returns**: `true` is the component contains no data, `false` otherwise.
+>>>info
+Also available as a **read-only** bean: `components.empty`.
+<<<
+- `[js]components.keySet()`
+  - **Returns**: A set of all types (as implementations of `DataComponentType` interface) in the component map.
+- `[js]components.size()`
+  - **Returns**: The amount of keys in the component map.
+
+As with usual read-only maps, `components` also contain `filter` and `forEach` methods. 
 
 # Further Reading
 - [Minecraft Wiki: Data Component format](https://minecraft.wiki/w/Data_component_format)

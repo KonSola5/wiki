@@ -29,7 +29,7 @@ Also available as a **read-only** bean: `components.empty`.
 - `[js]components.size()`
   - **Returns**: The amount of keys in the component map.
 
-As with usual read-only maps, `components` also contain `filter` and `forEach` methods. 
+Just like other read-only maps, `components` also contain `filter` and `forEach` methods. 
 
 # Further Reading
 - [Minecraft Wiki: Data Component format](https://minecraft.wiki/w/Data_component_format)

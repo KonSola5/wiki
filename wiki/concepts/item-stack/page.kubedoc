@@ -117,7 +117,7 @@ WIP! (TODO: make a page on Components and KubeJS' ComponentFunctions interface)
  
 - `[js]item.getHarvestSpeed()`:
 - `[js]item.getHarvestSpeed(block)`:
-  - `block` #[[#z\51565D|\[Optional\]]]: The `Block` to check the harvest speed against.
+  - `block` #[[#51565D;border:1px solid black|\[Optional\]]]: The `Block` to check the harvest speed against.
   - **Returns**: The harvest speed of the item against a given block, or its default harvest speed if `block` isn't provided.
 - `[js]item.toItemString()`:
   - **Returns**: A KubeJS string representation of an ItemStack.  

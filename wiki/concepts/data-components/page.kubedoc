@@ -1,5 +1,5 @@
 WIP!
-**Data components** are structured data consisting of key-value pairs, that define various properties of items and block entities, such as their name, lore, enchantments, inventory, etc. Data components can be attached to Items (and thus [/concepts/item-stack|ItemStacks]), and block entities.
+**Data components** are structured data consisting of key-value pairs, that define various properties of items and block entities, such as their name, lore, enchantments, inventory, etc. Data components can be attached to Items (and thus [[/concepts/item-stack|ItemStacks]]), and block entities.
 
 This article will discuss how you can create data component types and manipulate them.
 

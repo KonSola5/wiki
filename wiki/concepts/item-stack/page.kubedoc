@@ -104,16 +104,17 @@ WIP! (TODO: make a page on Components and KubeJS' ComponentFunctions interface)
 - `[js]item.enchant(enchantments)`:
   - `enchantments`: The enchantments to apply. It may be an object with keys being strings representing enchantments and values being the levels of enchantments.
   - **Returns**: A copy of `item` with the enchantments applied. Only enchantments that were not present on the `item` already or that were below the level applied will be changed.
-  - Example:  
-  ```js
-	const enchItem = item.enchant({
-		"minecraft:efficiency": 5,
-		"minecraft:unbreaking": 3,
-		"minecraft:mending": 1
-	})
-	// Will result in a copy of an item with the following enchantments applied:
-	// Efficiency V, Unbreaking III, Mending
-  ```
+  
+Example:  
+```js
+const enchItem = item.enchant({
+	"minecraft:efficiency": 5,
+	"minecraft:unbreaking": 3,
+	"minecraft:mending": 1
+})
+// Will result in a copy of an item with the following enchantments applied:
+// Efficiency V, Unbreaking III, Mending
+```
  
 - `[js]item.getHarvestSpeed()`:
 - `[js]item.getHarvestSpeed(block)`:

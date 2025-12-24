@@ -130,7 +130,8 @@ WIP! (TODO: make a page on Components and KubeJS' ComponentFunctions interface)
   - `name` - A text `Component` to apply as custom name. It may be a plain string, for example: `[js]'My custom item!'`
   - **Returns**: A copy of `item` with `minecraft:custom_name` data component applied.
 - `[js]withLore(lore)`: Copies this item stack with the specified lore text
-  - `lore` - An **array** of text `Component`s to apply as lore. Components in the array may be plain strings, for example: `[js]\['Some cool lore!', 'KubeJS rocks!'\]`
+  - `lore` - An **array** of text `Component`s to apply as lore. Components in the array may be plain strings.  
+	  For example: `[js]\['Some cool lore!', 'KubeJS rocks!'\]`
   - **Returns**: A copy of `item` with `minecraft:lore` data component applied.
 
 - `[js]typeData`: ??? (is this just a custom map for scripters to use to attach data to item definitions?)

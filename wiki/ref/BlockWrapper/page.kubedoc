@@ -11,9 +11,11 @@ It's exposed to [[/global-scope|global scope]] as `Block`.
 Block.of(id)
 ```
 **Parameters**
-- `[js]id`: - a ResourceLocation instance corresponding to a block ID. It can be a string representing a resource location, for example: `[js]'minecraft:stone'`.
+- `[js]id`: A ResourceLocation instance corresponding to a block ID. It can be a string representing a resource location, for example: `[js]'minecraft:stone'`.
 **Returns**
 A new {block} corresponding to the provided `id`.
+
+---
 
 ### `getId`
 
@@ -25,6 +27,8 @@ Block.getId(block)
 **Returns**
 A ResourceLocation corresponding to the provided `block`.
 
+---
+
 ## Predicates
 
 ### `id`
@@ -34,9 +38,11 @@ Block.id(id)
 ```
 
 **Parameters**
-- `[js]id`: - a ResourceLocation instance corresponding to a block ID. It can be a string representing a resource location, for example: `[js]'minecraft:stone'`.
+- `[js]id`: A ResourceLocation instance corresponding to a block ID. It can be a string representing a resource location, for example: `[js]'minecraft:stone'`.
 **Returns**
 A new `BlockIDPredicate` matching the block with the given `id`.
+
+---
 
 ### `entity`
 
@@ -45,9 +51,11 @@ Block.entity(id)
 ```
 
 **Parameters**
-- `[js]id`: - a ResourceLocation instance corresponding to a block entity ID. It can be a string representing a resource location, for example: `[js]'minecraft:chest'`.
+- `[js]id`: A ResourceLocation instance corresponding to a block entity ID. It can be a string representing a resource location, for example: `[js]'minecraft:chest'`.
 **Returns**
 A new `BlockEntityPredicate` matching the block entity with the given `id`.
+
+---
 
 ### `custom`
 
@@ -56,7 +64,7 @@ Block.custom(blockPredicate)
 ```
 
 **Parameters**
-- `[js]blockPredicate`: - a BlockPredicate instance. It can be a function, which takes a `LevelBlock` (KubeJS' interface for script-friendly block access) and returns a boolean.
+- `[js]blockPredicate`: A BlockPredicate instance. It can be a function, which takes a `LevelBlock` (KubeJS' interface for script-friendly block access) and returns a boolean.
 **Returns**
 If `blockPredicate` was already a BlockPredicate, it returns the same `blockPredicate`.
 If `blockPredicate` was a function, it returns the function wrapped into a `BlockPredicate`.
@@ -65,6 +73,8 @@ If `blockPredicate` was a function, it returns the function wrapped into a `Bloc
 // Returns a BlockPredicate that matches all blocks whose block light is greater than 7
 Block.custom(block => block.blockLight > 7)
 ```
+
+---
 
 ## Collections
 
@@ -78,6 +88,8 @@ Block.typeList // read-only bean
 **Returns**
 A list of class names of all blocks registered in the game.
 
+---
+
 ### `getTaggedIds`
 
 ```js
@@ -85,10 +97,12 @@ Block.getTaggedIds(tag)
 ```
 
 **Parameters**
-- `[js]tag`: - a `ResourceLocation` instance corresponding to a block tag. It can be a string representing a resource location, for example: `[js]'minecraft:logs'`.
+- `[js]tag`: A `ResourceLocation` instance corresponding to a block tag. It can be a string representing a resource location, for example: `[js]'minecraft:logs'`.
 
 **Returns**
 A list of `ResourceLocation`s of all blocks in a block tag.
+
+---
 
 ### `getAllBlockStates`
 
@@ -99,6 +113,9 @@ Block.allBlockStates // read-only bean
 
 **Returns**
 A set of all `BlockState`s registered in the game.
+
+
+---
 
 ### `getFacing`
 
@@ -114,6 +131,8 @@ It can be used as a usual JavaScript object:
 Block.facing.south // Direction.SOUTH
 ```
 
+---
+
 ## Other
 
 ### `withProperties`
@@ -126,6 +145,8 @@ Block.withProperties(blockState, properties)
 - `[js]properties`: A map of block state property keys to their values. It can be an object, for example `[js]{axis: 'x'}`. If the property isn't present on the block, the newly created block state won't have that property set.
 **Returns**
 A new `BlockState` with all the properties on the `properties` map/object set.
+
+---
 
 # Source
 

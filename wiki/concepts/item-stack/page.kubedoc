@@ -17,7 +17,7 @@ Since 1.20.4, data on items has changed *significantly* with the transition from
 
 # Creating ItemStacks
 
-KubeJS will automatically try to *wrap* any input to an item stack in places where it is expected, but you can also use the `Item` wrapper ([[/ref/ItemWrapper|reference]]) to explicitly create them yourself, specifically using `[js]Item.of(input)` and `[js]Item.of(input, count)`:
+KubeJS will automatically try to *wrap* any input to an item stack in places where it is expected, but you can also use the `Item` wrapper ([[/ref/wrappers/ItemWrapper|reference]]) to explicitly create them yourself, specifically using `[js]Item.of(input)` and `[js]Item.of(input, count)`:
 
 Most ItemStacks can be simply written as string literals.
 

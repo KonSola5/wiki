@@ -1,6 +1,8 @@
 `Item`s are objects representing Minecraft items.
 They are usually used in places where the item's components are needed.
 
+TODO: Reword this article!
+
 # Type wrappers
 Various data types can wrap into `Item`s when an `Item` is expected.
 

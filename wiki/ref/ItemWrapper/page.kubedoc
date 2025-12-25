@@ -11,12 +11,12 @@ Item.of(itemStack, count)
 Item.of(itemStack, count, components)
 ```
 **Parameters**
-- `[js]itemStack` - an [[/ref/ItemStack|ItemStack]]. Like with any other place that expects an `ItemStack`, the argument will be converted to `ItemStack` if possible.
+- `[js]itemStack` - an [[/concepts/item-stack|ItemStack]]. Like with any other place that expects an `ItemStack`, the argument will be converted to `ItemStack` if possible.
 **Optional parameters**:
 - `[js]components` - A map of components. Can be a string representing key-value pairs: `damage=2, item_name={text:"Hello world"}`.
 - `[js]count` - An integer, representing the size of the item stack.
 **Returns**
-- A new [[/ref/ItemStack|ItemStack]].
+- A new [[/concepts/item-stack|ItemStack]].
 
 ## `getList`
 
@@ -26,7 +26,7 @@ Item.list // Bean
 ```
 
 **Returns**
-- A list of most items (as [[/ref/ItemStack|ItemStack]]s) in the game. Items, that are not in a creative tab are ignored.
+- A list of most items (as [[/concepts/item-stack|ItemStack]]s) in the game. Items, that are not in a creative tab are ignored.
 
 ## `getTypeList`
 
@@ -46,7 +46,7 @@ Item.typeToStackMap // Bean
 ```
 
 **Returns**
-- A map between ResourceLocations and collections of variants of [[/ref/ItemStack|ItemStack]].
+- A map between ResourceLocations and collections of variants of [[/concepts/item-stack|ItemStack]].
 
 ## `getVariants`
 
@@ -54,9 +54,9 @@ Item.typeToStackMap // Bean
 Item.getVariants(itemStack)
 ```
 **Parameters**
-- `[js]itemStack` - an [[/ref/ItemStack|ItemStack]].
+- `[js]itemStack` - an [[/concepts/item-stack|ItemStack]].
 **Returns**
-- A collections of variant of the given [[/ref/ItemStack|ItemStack]].
+- A collections of variant of the given [[/concepts/item-stack|ItemStack]].
 
 ## `getEmpty`
 
@@ -66,7 +66,7 @@ Item.empty // Bean
 ```
 
 **Returns**
-- An [[/ref/ItemStack|ItemStack]] that represents an empty slot or air.
+- An [[/concepts/item-stack|ItemStack]] that represents an empty slot or air.
 
 ## `fireworks`
 
@@ -135,7 +135,7 @@ Item.getItem(id)
 **Parameters**
 - `[js]id` - a ResourceLocation instance or a string representing a resource location, like `'minecraft:diamond_sword'`.
 **Returns**
-An [[/ref/Item|Item]] instance.
+An [[/concepts/item|Item]] instance.
 
 ## `getID`
 
@@ -144,7 +144,7 @@ Item.getID(item)
 ```
 
 **Parameters**
-- `[js]item` - an [[/ref/Item|Item]].
+- `[js]item` - an [[/concepts/item|Item]].
 **Returns**
 An ResourceLocation of the item.
 
@@ -168,7 +168,7 @@ Item.isItem(object)
 **Parameters**
 - `[js]object` - Any object.
 **Returns**
-`true` if the object is an instance of [[/ref/ItemStack|ItemStack]], `false` otherwise.
+`true` if the object is an instance of [[/concepts/item-stack|ItemStack]], `false` otherwise.
 
 ## `playerHead`
 

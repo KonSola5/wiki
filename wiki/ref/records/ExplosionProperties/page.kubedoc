@@ -23,14 +23,14 @@ Explosion damage calculator.
 <<<
 >>> #strength-description
 Specifies the strength of the explosion.
-Defaults to `3` if not provided.
+Defaults to `[js]3` if not provided.
 <<<
 >>> #causes-fire-type
 `boolean`
 <<<
 >>> #causes-fire-description
 Specifies, whether explosion causes fire, like Ghast fireball explosions or bed explosions in the Nether.
-Defaults to `false` if not provided.
+Defaults to `[js]false` if not provided.
 <<<
 >>> #mode-type
 `Level.ExplosionInteraction`
@@ -38,38 +38,39 @@ Defaults to `false` if not provided.
 >>> #mode-description
 The explosion mode.
 May be also a string representing a mode:
-`'none'`, `'block'`, `'mob'`, `'tnt'`, `'trigger'`
-Defaults to `'none'` if not provided.
+`[js]'none'`, `[js]'block'`, `[js]'mob'`, `[js]'tnt'`, `[js]'trigger'`
+Defaults to `[js]'none'` if not provided.
 <<<
 >>> #particles-type
 `boolean`
 <<<
 >>> #particles-description
-Whether the explosion emits particles or not. Defaults to `true` if not provided.
+Whether the explosion emits particles or not.
+Defaults to `[js]true` if not provided.
 <<<
 >>> #small-particles-type
 `ParticleOptions`
 <<<
 >>> #small-particles-description
 Specifies the small particles used in the explosion.
-May be also a string representing the particle to use, for example `'minecraft:angry_villager'`.
-Defaults to `'minecraft:explosion'` if not provided.
+May be also a string representing the particle to use, for example `[js]'minecraft:angry_villager'`.
+Defaults to `[js]'minecraft:explosion'` if not provided.
 <<<
 >>> #large-particles-type
 `ParticleOptions`
 <<<
 >>> #large-particles-description
 Specifies the large particles used in the explosion.
-May be also a string representing the particle to use, for example `'minecraft:angry_villager'`.
-Defaults to `'minecraft:explosion_emitter'` if not provided.
+May be also a string representing the particle to use, for example `[js]'minecraft:angry_villager'`.
+Defaults to `[js]'minecraft:explosion_emitter'` if not provided.
 <<<
 >>> #explosion-sound-type
 `Holder<SoundEvent>`
 <<<
 >>> #explosion-sound-description
 Specifies the sound of the explosion.
-May be also a string representing a sound, for example `'minecraft:block.amethyst_block.chime'`.
-Defaults to `'minecraft:entity.generic.explode'` if not provided.
+May be also a string representing a sound, for example `[js]'minecraft:block.amethyst_block.chime'`.
+Defaults to `[js]'minecraft:entity.generic.explode'` if not provided.
 <<<
 
 # Properties

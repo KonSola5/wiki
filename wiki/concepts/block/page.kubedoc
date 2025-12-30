@@ -31,7 +31,7 @@ Most `BlockState`s can be written as string literals, with block property syntax
 Position related beans on `LevelBlock` make for a useful application of a [destructuring pattern](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to quickly get all the block's coordinates to variables.
 
 ```js
-const \{ x, y, z \} = block
+const { x, y, z } = block
 // Now x, y and z constants are respectively the block's x, y and z coordinate.
 ```
 

@@ -18,13 +18,22 @@ Most `BlockState`s can be written as string literals, with block property syntax
 
 ## Position
 
-| Getter                 | Read-only bean    | Description                          |
-| `[js]block.getNorth()` | `[js]block.north` | Gets the block to the north of self. |
-| `[js]block.getSouth()` | `[js]block.south` | Gets the block to the south of self. |
-| `[js]block.getEast()`  | `[js]block.east`  | Gets the block to the east of self.  |
-| `[js]block.getWest()`  | `[js]block.west`  | Gets the block to the west of self.  |
-| `[js]block.getUp()`    | `[js]block.up`    | Gets the block above self.           |
-| `[js]block.getDown()`  | `[js]block.down`  | Gets the block below self.           |
+| Getter                   | Read-only bean      | Description                                       |
+| `[js]block.getPos()`     | `[js]block.pos`     | Gets the position of the block, as BlockPos.      |
+| `[js]block.getX()`       | `[js]block.x`       | Gets the x coordinate of the block.               |
+| `[js]block.getY()`       | `[js]block.y`       | Gets the y coordinate of the block.               |
+| `[js]block.getZ()`       | `[js]block.z`       | Gets the z coordinate of the block.               |
+| `[js]block.getCenterX()` | `[js]block.centerX` | Gets the x coordinate of the center of the block. |
+| `[js]block.getCenterY()` | `[js]block.centerY` | Gets the y coordinate of the center of the block. |
+| `[js]block.getCenterZ()` | `[js]block.centerZ` | Gets the z coordinate of the center of the block. |
+
+**Example**
+Position related beans on `LevelBlock` make for a useful application of a [destructuring pattern](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to quickly get all the block's coordinates to variables.
+
+```js
+const \{ x, y, z \} = block
+// Now x, y and z constants are respectively the block's x, y and z coordinate.
+```
 
 ---
 
@@ -64,10 +73,28 @@ These getters allow you to get blocks around the currently referenced block, as 
 
 ### Accessors
 
-| Getter                      | Setter                                | Bean                   | Description                                      |
-| `[js]block.getEntityData()` | `[js]block.setEntityData(entityData)` | `[js]block.entityData` | Gets or sets the block entity data of the block. |
-| `[js]block.getBlockState()` | `[js]block.setBlockState(state)`      | `[js]block.blockState` | Gets or sets the BlockState of the block.        |
+>>> #entity-data
+Gets or sets the block entity data (as `CompoundTag`) of the block. The data get or set may be `null`.
+<<<
+>>> #block-state-note
+Gets or sets the BlockState of the block.
+**Note**: `setBlockState` also has an overload that allows for setting block update flags, see "Setters".
+<<<
 
+| Getter                      | Setter                                | Bean                   | Description         |
+| `[js]block.getEntityData()` | `[js]block.setEntityData(entityData)` | `[js]block.entityData` | <#entity-data>      |
+| `[js]block.getBlockState()` | `[js]block.setBlockState(state)`      | `[js]block.blockState` | <#block-state-note> |
+
+### Setters
+
+- `[js]block.set(block, properties, updateFlags)`
+  - `[js]block`: The Block to set the `block` to. It may be a string representing a block, for example `[js]'minecraft:oak_log'`
+  - `[js]properties` {optional}: Block properties to set on that block. It can be an object representing the block properties, for example `[js]\{ axis: 'x' \}`
+  - `[js]updateFlags` {optional}: Block update flags. They are a bit map of update properties.
+
+- `[js]block.setBlockState(blockState, updateFlags)`
+  - `[js]blockState`: The BlockState to set the `block` to. It may be a string representing a block state, for example `[js]'minecraft:oak_log\[axis=x\]'`
+  - `[js]updateFlags` {optional}: Block update flags. They are a bit map of update properties.
 
 ### Getters
 
@@ -106,6 +133,21 @@ Gets `true` if block can see sky, `false` if it can't.
 | `[js]block.getTypeData()`        | `[js]block.typeData`        | ???                                                           |
 
 ### Other methods
+
+- `[js]block.offset(direction)`
+- `[js]block.offset(direction, amount)`
+  - `[js]direction`: A `Direction`. In can be a string representing a direction, for example `[js]'north'`
+  - `[js]amount` {optional}: Amount of blocks to move away from the `block`. Defaults to `1` if not provided.
+- `[js]block.offset(x, y, z)`
+  - `[js]x`, `[js]y`, `[js]z`: Amount of blocks to move from the `block` in x, y and z directions respectively.
+  - **Returns**: A `LevelBlock` representing a block at a specified offset.
+
+- `[js]block.mergeEntityData(entityData)`
+  - `[js]entityData`: The block entity data (as `CompoundTag`) to merge with existing entity data.
+
+- `[js]block.explode(explosionProperties)`
+  - `[js]explosionProperties`: The [[/ref/records/ExplosionProperties|explosion properties]] to use.
+  - **Returns**: An `Explosion` object. Also creates an explosion at the location of the block.
 
 ---
 

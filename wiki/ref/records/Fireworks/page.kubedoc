@@ -7,11 +7,8 @@
 >>> #flight-duration-description
 Specifies the flight duration of the rocket, that is - with how much gunpowder the rocket was crafted. Used to specify, for how long should the firework boost Elytra flight and how far should firework fly, with certain random variation.
 <<<
->>> #link-in-codeblock
-List<[[/ref/records/FireworkExplosion|FireworkExplosion]]>
-<<<
 >>> #explosions-type
-`<#link-in-codeblock>`
+`List<`[[/ref/records/FireworkExplosion|`FireworkExplosion`]]`>`
 <<<
 >>> #explosions-description
 A list of up to 256 [[/ref/records/FireworkExplosion|firework explosions]].

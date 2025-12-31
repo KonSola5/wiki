@@ -44,7 +44,6 @@ Whether the firework has a twinkle effect.
 # Properties
 
 | Property     | Type                | Description                |
-| ------------ | ------------------- | -------------------------- |
 | `shape`      | <#shape-type>       | <#shape-description>       |
 | `colors`     | <#colors-type>      | <#colors-description>      |
 | `fadeColors` | <#fade-colors-type> | <#fade-colors-description> |

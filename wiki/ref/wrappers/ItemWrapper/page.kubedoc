@@ -83,44 +83,15 @@ Item.empty // Read-only bean
 ## `fireworks`
 
 ```js
-Item.fireworks(fireworksProps)
+Item.fireworks(fireworkProperties)
 ```
 
 **Parameters**
-- `[js]fireworksProps` - a record containing fireworks properties.
-
-This parameter accepts an object in this place.
-
-```ts
-type Fireworks = {
-	explosions?: FireworkExplosion[];
-	flightDuration?: int
-}
-
-type FireworkExplosion = {
-	/** Whether the explosion has a twinkle or not. */
-	hasTwinkle?: boolean
-	/** Whether the explosion has a trail or not. */
-	hasTrail?: boolean
-	/** The shape of the firework explosion. */
-	shape?: 'small_ball' | 'large_ball' | 'star' | 'creeper' | 'burst'
-	/** 
-	 * What colors do the explosions have.
-	 * Most comfortably described as an array of hex numbers, like:
-	 * [0x2244ee, 0x33aaff]
-	 */
-	colors?: int[]
-  /** 
-	 * What colors do the explosions fade into.
-	 * Most comfortably described as an array of hex numbers, like:
-	 * [0x2244ee, 0x33aaff]
-	 */
-	fadeColors?: int[]
-}
-```
+- `[js]fireworkProperties` - The [[/ref/records/Fireworks|firework properties]] to use.
 
 **Returns**
-- A `Fireworks` object.
+If `fireworkProperties` was already an instance of [[/ref/records/Fireworks|`Fireworks`]], it returns the same [[/ref/records/Fireworks|`Fireworks`]].
+If `fireworkProperties` was an object or an array, it returns the [[/ref/records/Fireworks|`Fireworks`]] instance created from the object/array.
 
 **Example**
 ```js
@@ -134,7 +105,7 @@ Item.fireworks({
 			fadeColors: [0xee33ff],
 		},
 	],
-	flightDuration: 5
+	flightDuration: 2
 })
 ```
 

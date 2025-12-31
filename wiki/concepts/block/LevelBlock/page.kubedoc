@@ -194,7 +194,7 @@ Will get an empty list if the block is not on a server-side world.
 
 - `[js]block.popItemFromFace(item, direction)`
   - `[js]item`: The item to pop from the block (as [[/concepts/item-stack|ItemStack]]).
-  - `[js]direction`: A `Direction`. In can be a string representing a direction, for example `[js]'north'`
+  - `[js]direction`: A `Direction`. It can be a string representing a direction, for example `[js]'north'`
   - Results in the specified `[js]item` being popped as an item entity from the specified side from the location of the block.
 
 - `[js]block.toBlockStateString()`

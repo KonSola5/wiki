@@ -1,4 +1,6 @@
-{record}
+>>> info
+This class is a [[/ref/records|record]]. If you want to learn, how to use them in KubeJS scripts, [[/ref/records|go here]].
+<<<
 
 **ExplosionProperties** define explosion properties. Nothing to write home about here.
 

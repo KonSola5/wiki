@@ -1,3 +1,5 @@
+{record}
+
 **FireworkExplosion** record defines how fireworks explode. This record is used as a part of the `minecraft:firework_explosion` data component.
 
 >>> #shape-type

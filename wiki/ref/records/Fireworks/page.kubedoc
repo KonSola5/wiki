@@ -1,3 +1,5 @@
+{record}
+
 **Fireworks** record defines firework properties. This record is used as a part of the `minecraft:firework` data component.
 
 >>> #flight-duration-type

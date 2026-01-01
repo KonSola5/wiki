@@ -1,2 +1,7 @@
 title: "Records"
 description: "Classes usually representing properties of something"
+
+record: |
+  >>> info
+  This class is a [[/ref/records|record]]. If you want to learn, how to use them in KubeJS scripts, [[/ref/records|go here]].
+  <<<

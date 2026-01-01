@@ -1,2 +1,4 @@
 title: "ExplosionProperties"
 description: "KABOOM!!!"
+
+record: ">>> info This class is a [[/ref/records|record]]. If you want to learn, how to use them in KubeJS scripts, [[/ref/records|go here]]. <<<"

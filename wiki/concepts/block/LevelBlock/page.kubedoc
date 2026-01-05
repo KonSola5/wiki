@@ -6,6 +6,8 @@
 
 # Useful LevelBlock methods
 
+In the following examples, `[js]block` will refer to the instance of `LevelBlock`.
+
 ## Position
 
 | Getter                   | Read-only bean      | Description                                       |

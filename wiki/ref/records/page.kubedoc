@@ -12,7 +12,7 @@ In KubeJS scripts, records can be described in two ways: JavaScript objects and 
 The following examples will use [[/ref/wrappers/ItemWrapper|`Item.fireworks`]] method which takes in a parameter of [[/ref/records/Fireworks|`Fireworks`]].
 <<<
 
-# JavaScript objects
+## JavaScript objects
 
 In this style, the object must have keys named exactly like the record's accessors.
 All properties of the object are considered optional, and are considered `[js]null` if they aren't provided in the object.

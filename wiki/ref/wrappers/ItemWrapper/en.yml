@@ -1,3 +1,2 @@
-item: "#[[orange|`<`#[[yellow|`item`]]`>`]]"
-components: "#[[blue|`\\[​`#[[orange|`<`#[[yellow|`components`]]`>`]]`​\\]`]]"
-custom-data: "#[[blue|`\\{​`#[[orange|`<`#[[yellow|`custom-data`]]`>`]]`​\\}`]]"
+title: "ItemWrapper"
+description: "Getting items from string"

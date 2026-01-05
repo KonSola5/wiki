@@ -1,1 +1,2 @@
-block: "[[/concepts/block|Block]]"
+title: "BlockWrapper"
+description: "Getting blocks from string"

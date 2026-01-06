@@ -118,10 +118,9 @@ Utils.regex(regexLike)
 
 **Returns**
 If the `[js]regexLike` was:
-
-  - a [`Pattern`]({pattern-link}) - returns the same Pattern
-  - a [`RegExp`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) - returns a `Pattern` corresponding to the RegExp,
-  - a string or a character sequence - If the string is formed similarly to a JavaScript regex literal, returns a `Pattern` corresponding to the string.
+- a [`Pattern`]({pattern-link}) - returns the same Pattern
+- a [`RegExp`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) - returns a `Pattern` corresponding to the RegExp,
+- a string or a character sequence - If the string is formed similarly to a JavaScript regex literal, returns a `Pattern` corresponding to the string.
 
 If `[js]regexLike` was of a different type, this returns `[js]null`.
 

@@ -31,7 +31,7 @@ Java.tryloadClass(className)
 - `[js]className`: A string representing a fully qualified class name - that is, a name of a class prefixed with a name of a package the class is in.
 
 **Returns**
-A reference to a Java class, or `[js]null` if the provided class name is not allowed by the class filter.
+A reference to a Java class, or `[js]null` if the provided class name is not allowed by the class filter or not found.
 To learn, how to use such reference, see [[/ref/java/class|here]].
 
 ---

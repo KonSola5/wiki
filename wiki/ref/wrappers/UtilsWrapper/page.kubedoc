@@ -37,7 +37,7 @@ Utils.randomOf(random, collection)
 
 >>> #random
 `[js]random`: An instance of [`Random`]({random-link}).
-Note that unlike `RandomSource` obtained via `[js]Utils.getRandom` or `[js]Utils.randomOf`, this [`Random`]({random-link}) comes from a built-in Java package ([`java.util.Random`]({random-link})) and not from Minecraft (`net.minecraft.util.RandomSource`), and are not assignable to each other, since they have not in a common ancestor tree.
+Note that unlike `RandomSource` obtained via `[js]Utils.getRandom()` or `[js]Utils.randomOf(random, collection)`, this [`Random`]({random-link}) comes from a built-in Java package ([`java.util.Random`]({random-link})) and not from Minecraft (`net.minecraft.util.RandomSource`), and are not assignable to each other, since they have not in a common ancestor tree.
 <<<
 
 **Parameters**
@@ -59,9 +59,9 @@ Utils.emptyList()
 **Returns**
 A new empty, immutable (read-only) `ArrayList`.
 
-### `emptyList`
-
 ---
+
+### `emptyMap`
 
 ```js
 Utils.emptyMap()

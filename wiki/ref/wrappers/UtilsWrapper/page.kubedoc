@@ -118,14 +118,16 @@ Utils.regex(regexLike)
 
 **Returns**
 If the `[js]regexLike` was:
+
   - a [`Pattern`]({pattern-link}) - returns the same Pattern
   - a [`RegExp`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) - returns a `Pattern` corresponding to the RegExp,
   - a string or a character sequence - If the string is formed similarly to a JavaScript regex literal, returns a `Pattern` corresponding to the string.
+
 If `[js]regexLike` was of a different type, this returns `[js]null`.
 
 ===Throws===
 If the given string doesn't start with a `/`, this throws an exception.
-Other malformations are silently ignored, until the string is passed into the [`Pattern.compile`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html#compile(java.lang.String)) method, which may throw an exception on an improper pattern.
+Other malformations are silently ignored, until the string is passed into the [`Pattern.compile`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html#compile(java.lang.String) method, which may throw an exception on an improper pattern.
 
 ```js
 Utils.regex(regexString, flags)
@@ -139,7 +141,7 @@ A new [`Pattern`]({pattern-link}) with the given pattern and flags.
 
 ===Throws===
 If the given string doesn't start with a `/`, this throws an exception.
-Other malformations are silently ignored, until the string is passed into the [`Pattern.compile`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html#compile(java.lang.String)) method, which may throw an exception on an improper pattern.
+Other malformations are silently ignored, until the string is passed into the [`Pattern.compile`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html#compile(java.lang.String) method, which may throw an exception on an improper pattern.
 
 ---
 

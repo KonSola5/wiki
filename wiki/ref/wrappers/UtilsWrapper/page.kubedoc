@@ -45,7 +45,7 @@ Note that unlike `RandomSource` obtained via `[js]Utils.getRandom()` or `[js]Uti
 - `[js]collection` - Any Java collection. This includes all sorts of lists, but not maps. It may be also a JS array, like `[js]\['one', 'two', 'three'\]`.
 
 **Returns**
-A random element from the list.
+A random element from the collection.
 
 ---
 
@@ -144,7 +144,7 @@ Other malformations are silently ignored, until the string is passed into the [`
 
 ---
 
-### Registry lookup
+## Registry lookup
 
 ### `getStat`
 
@@ -153,7 +153,7 @@ Utils.getStat(id)
 ```
 
 **Parameters**
-- `[js]resourceLocation`: The stat's `ResourceLocation`.
+- `[js]id`: The stat's `ResourceLocation`.
 
 >>> danger
 Do NOT pass strings in place of the `ResourceLocation` here!

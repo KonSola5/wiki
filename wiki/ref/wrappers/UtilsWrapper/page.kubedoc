@@ -177,21 +177,7 @@ Utils.getSound(id)
 - `[js]id`: The sound's resource location. It may be a string.
 
 **Returns**
-A `SoundEvent` corresponding to the given `id`, or `[js]null` if the sound even doesn't exist.
-
----
-
-### `getSound`
-
-```js
-Utils.getSound(id)
-```
-
-**Parameters**
-- `[js]id`: The sound's resource location. It may be a string.
-
-**Returns**
-A `SoundEvent` corresponding to the given `id`, or `[js]null` if the sound even doesn't exist.
+A `SoundEvent` corresponding to the given `id`, or `[js]null` if the sound event doesn't exist under the provided ID.
 
 ---
 
@@ -205,11 +191,11 @@ Utils.findCreativeTab(id)
 - `[js]id`: The creative tab's resource location. It may be a string representing the creative mode tab, for example `[js]'minecraft:building_blocks'`.
 
 **Returns**
-A `SoundEvent` corresponding to the given `id`, or `[js]null` if the sound even doesn't exist.
+A `CreativeModeTab` corresponding to the given `id`, or `[js]null` if the creative mode tab doesn't exist under the provided ID.
 
 ---
 
-## `Lazy and asynchronous Java`
+## Lazy and asynchronous Java
 
 ### `lazy`
 

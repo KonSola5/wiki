@@ -25,7 +25,7 @@ These objects can be converted to `HolderSet` directly by doing the following:
 - `HolderSet`: kept as is,
 - `Holder`: creates a one-element `HolderSet` with the `Holder` inside,
 - `ResourceLocation` and strings representing resource locations, like `[js]'minecraft:iron_pickaxe'`: creates a flattened `HolderSet` with the `Holder` instances holding references to registry objects with the given resource location as its ID,
-- [`RegExp`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp), [`Pattern`]("https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html") and strings containing regex patterns (like `[js]'/minecraft:.*_wool/'`): Returns a `HolderSet` of all `Holders` of registry objects whose ID match the given regex,
+- [`RegExp`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp), [`Pattern`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) and strings containing regex patterns (like `[js]'/minecraft:.*_wool/'`): Returns a `HolderSet` of all `Holders` of registry objects whose ID match the given regex,
 - `TagKey` and strings representing tags (like `[js]'#minecraft:logs'`): Returns a `HolderSet` of all `Holders` of registry objects who are a part of a given tag,
 - Strings representing mod IDs (like `[js]'@minecraft'`): Returns a `HolderSet` of all `Holders` of registry objects that match the namespace part of their ID,
 - In all other cases, `[js]null` is returned.

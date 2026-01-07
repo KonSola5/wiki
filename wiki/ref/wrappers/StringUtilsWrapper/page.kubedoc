@@ -98,7 +98,7 @@ StringUtils.snakeCaseToTitleCase(string)
 
 Converts casing of the provided string from [`snake_case`](https://en.wikipedia.org/wiki/Snake_case) into [Title Case](https://en.wikipedia.org/wiki/Title_case).
 First word will always be capitalized, other words will be capitalized unless the word is an article or preposition.
-Used internally by KubeJS as a part of generating implicit display names for ID for custom items that had no explicit display name provided. 
+Used internally by KubeJS as a part of generating implicit display names from ID for custom items that had no explicit display name provided. 
 For example, `kubejs:my_item` will get "My Item" as an implicit display name.
 
 **Parameters**
@@ -198,7 +198,7 @@ StringUtils.getUniqueId(object, toJsonFunction)
 - `[js]toJsonFunction` - A function that takes the `[js]object` and returns a `[js]JsonElement`. It may be a JS function, but be aware that it must return a Java `[js]JsonElement`, not a JS object!
 
 **Returns**
-The hash of JSON creates as a result of conversion of `[js]object` to JsonObject as string.
+The hash of JSON created as a result of conversion of `[js]object` to JsonObject as string.
 
 # Static fields
 

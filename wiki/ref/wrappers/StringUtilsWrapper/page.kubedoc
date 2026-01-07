@@ -195,10 +195,40 @@ StringUtils.getUniqueId(object, toJsonFunction)
 
 **Parameters**
 - `[js]object` - Object of any type.
-- `[js]function` - A function that takes the `[js]object` and returns a `[js]JsonElement`. It may be a JS function, but be aware that it must return a Java `[js]JsonElement`, not a JS object!
+- `[js]toJsonFunction` - A function that takes the `[js]object` and returns a `[js]JsonElement`. It may be a JS function, but be aware that it must return a Java `[js]JsonElement`, not a JS object!
 
 **Returns**
 The hash of JSON creates as a result of conversion of `[js]object` to JsonObject as string.
+
+# Static fields
+
+## `SNAKE_CASE_SPLIT`
+
+```js
+StringUtils.SNAKE_CASE_SPLIT
+```
+
+**Value**
+A [`Pattern`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) corresponding to the following regex: `[js]/[:_/]/`.
+
+## `ALWAYS_LOWER_CASE`
+
+```js
+StringUtils.ALWAYS_LOWER_CASE
+```
+
+**Value**
+A `Set` containing words that won't be normally converted to uppercase in process of converting the string to [Title Case](https://en.wikipedia.org/wiki/Title_case):
+"a", "an", "the", "of", "on", "in", "and", "or", "but", "for".
+
+## `EMPTY_STRING_ARRAY`
+
+```js
+StringUtils.EMPTY_STRING_ARRAY
+```
+
+**Value**
+An empty string Java array.
 
 # Source
 

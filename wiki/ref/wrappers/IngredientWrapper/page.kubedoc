@@ -40,6 +40,8 @@ Ingredient.withData(itemSet, componentFilter, strict)
 **Returns**
 A new [[/concepts/ingredient|Ingredient]] that accepts the given set of items under the given component filter.
 
+---
+
 ### `first`
 
 ```js
@@ -143,7 +145,7 @@ Ingredient.parseJson(json)
 Parses a JSON object into a potential Ingredient, according to Minecraft's own codec.
 
 **Parameters**
-- `[js]json`: A `JsonElement`. Can be also a JS object (?).
+- `[js]json`: A `JsonElement`. Can be also a JS object or array (?).
 
 **Returns**
 A `DataResult` that potentially contains an `Ingredient`.

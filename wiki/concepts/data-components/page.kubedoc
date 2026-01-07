@@ -5,9 +5,16 @@ This article will discuss how you can create data component types and manipulate
 
 # Creating DataComponentMaps
 
-In places where DataComponentMap is expected (such as the second argument of `[js]Item.of(item, components)`), you can write string literals with the same string format as you would use in [`/give`](https://minecraft.wiki/w/Argument_types#item_stack).
+In places where DataComponentMap is expected (such as the second argument of `[js]Item.of(item, components)`), you can write:
+- String literals with the same string format as you would use in [`/give`](https://minecraft.wiki/w/Argument_types#item_stack).
+`minecraft` namespace may be omitted for Minecraft's own data components.
 
 Example: `[js]Item.of('minecraft:diamond_sword', '\[damage=2,lore=[{text:"This item is cool."}]\]')`
+
+- JS objects, representing the key-value pairs. Values will be converted into appropriate NBT objects.
+`minecraft` namespace may be omitted for Minecraft's own data components.
+
+Example: `[js]Item.of('minecraft:diamond_sword', { damage: 2, lore: [{ text: "This item is cool." }] })`
 
 # Using DataComponentMaps
 
@@ -33,5 +40,5 @@ Just like other read-only maps, `components` also contain `filter` and `forEach`
 
 # Further Reading
 - [Minecraft Wiki: Data Component format](https://minecraft.wiki/w/Data_component_format)
-- [Data Components | NeoForged docs](https://docs.neoforged.net/docs/1.21.1/items/datacomponents)
+- [Data Components | NeoForge docs](https://docs.neoforged.net/docs/1.21.1/items/datacomponents)
 - [NBT Data](/concepts/nbt-data)

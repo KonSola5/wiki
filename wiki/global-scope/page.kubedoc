@@ -45,13 +45,13 @@ Gets `Block`s and `BlockState`s and has other block related utilities.
 Creates `SizedIngredient`s from strings and other objects.
 <<<
 >>> #facing
-[[/ref/wrappers/DirectionWrapper|`[js]Facing`]], [[/ref/wrappers/DirectionWrapper|`[js]Direction`]]
+[[/ref/wrappers/DirectionWrapper|`Facing`]], [[/ref/wrappers/DirectionWrapper|`Direction`]]
 <<<
 >>> #facing-description
 A value heavy interface containing all directions in a nice interface.
 <<<
 >>> #text
-[[/ref/wrappers/TextWrapper|`[js]Text`]], [[/ref/wrappers/TextWrapper|`[js]Component`]] 
+[[/ref/wrappers/TextWrapper|`Text`]], [[/ref/wrappers/TextWrapper|`Component`]] 
 <<<
 >>> #text-description
 Aids in creation of text components.
@@ -95,25 +95,25 @@ Aids in creation of universally unique identifiers (UUIDs).
 Classes (or more precisely, interfaces) corresponding to these globals are responsible for implicit type conversions from strings and other objects into Minecraft specific objects.
 They also contain many useful static methods - worth checking out.
 
-| Name                                                           | Description                    |
-| [[/ref/wrappers/ItemWrapper|`[js]Item`]]                       | <#item-description>            |
-| [[/ref/wrappers/IngredientWrapper|`[js]Ingredient`]]           | <#ingredient-description>      |
-| [[/ref/wrappers/SizedIngredientWrapper|`[js]SizedIngredient]]  | <#sizedingredient-description> |
-| [[/ref/wrappers/BlockWrapper|`[js]Block`]]                     | <#block-description>           |
-| [[/ref/wrappers/FluidWrapper|`[js]Fluid`]]                     | <#fluid-description>           |
-| <#facing>                                                      | <#facing-description>          |
-| <#text>                                                        | <#text-description>            |
-| [[/ref/wrappers/JavaWrapper|`[js]Java`]]                       | <#java-description>            |
-| [[/ref/wrappers/UtilsWrapper|`[js]Utils`]]                     | <#utils-description>           |
-| [[/ref/wrappers/AABBWrapper|`[js]AABB`]]                       | <#aabb-description>            |
-| [[/ref/wrappers/ColorWrapper|`[js]Color`]]                     | <#color-description>           |
-| [[/ref/wrappers/DataMapWrapper|`[js]DataMap`]]                 | <#dataMap-description>         |
-| [[/ref/wrappers/EntitySelectorWrapper|`[js]EntitySelector`]]   | <#entityselector-description>  |
-| [[/ref/wrappers/NBTWrapper|`[js]NBT`]]                         | <#nbt-description>             |
-| [[/ref/wrappers/ParticleOptionsWrapper|`[js]ParticleOptions`]] | <#particleoptions-description> |
-| [[/ref/wrappers/RegistryWrapper|`[js]Registry`]]               | <#registry-description>        |
-| [[/ref/wrappers/StringUtilsWrapper|`[js]StringUtils`]]         | <#stringutils-description>     |
-| [[/ref/wrappers/UUIDrapper|`[js]UUID`]]                        | <#uuid-description>            |
+| Name                                                       | Description                    |
+| [[/ref/wrappers/ItemWrapper|`Item`]]                       | <#item-description>            |
+| [[/ref/wrappers/IngredientWrapper|`Ingredient`]]           | <#ingredient-description>      |
+| [[/ref/wrappers/SizedIngredientWrapper|`SizedIngredient`]] | <#sizedingredient-description> |
+| [[/ref/wrappers/BlockWrapper|`Block`]]                     | <#block-description>           |
+| [[/ref/wrappers/FluidWrapper|`Fluid`]]                     | <#fluid-description>           |
+| <#facing>                                                  | <#facing-description>          |
+| <#text>                                                    | <#text-description>            |
+| [[/ref/wrappers/JavaWrapper|`Java`]]                       | <#java-description>            |
+| [[/ref/wrappers/UtilsWrapper|`Utils`]]                     | <#utils-description>           |
+| [[/ref/wrappers/AABBWrapper|`AABB`]]                       | <#aabb-description>            |
+| [[/ref/wrappers/ColorWrapper|`Color`]]                     | <#color-description>           |
+| [[/ref/wrappers/DataMapWrapper|`DataMap`]]                 | <#dataMap-description>         |
+| [[/ref/wrappers/EntitySelectorWrapper|`EntitySelector`]]   | <#entityselector-description>  |
+| [[/ref/wrappers/NBTWrapper|`NBT`]]                         | <#nbt-description>             |
+| [[/ref/wrappers/ParticleOptionsWrapper|`ParticleOptions`]] | <#particleoptions-description> |
+| [[/ref/wrappers/RegistryWrapper|`Registry`]]               | <#registry-description>        |
+| [[/ref/wrappers/StringUtilsWrapper|`StringUtils`]]         | <#stringutils-description>     |
+| [[/ref/wrappers/UUIDrapper|`UUID`]]                        | <#uuid-description>            |
 <<<
 
 >>> #old-list

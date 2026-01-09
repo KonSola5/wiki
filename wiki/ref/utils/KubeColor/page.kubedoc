@@ -43,7 +43,7 @@ color.fireworkRGB // read-only bean
 
 **Return value**
 An integer representing the color in `RRGGBB` format.
-In case the implementing class is `DyeColor`, it returns its firework color in `RRGGBB` instead, which is different from text color returned by `#RRGGBB`.
+In case the implementing class is `DyeColor`, it returns its firework color in `RRGGBB` instead, which is different from text color returned by `[js]getRgb()`.
 
 The table below shows all the firework colors for every `DyeColor` in the game.
 Note that `DyeColor` enum is not exposed to global scope.

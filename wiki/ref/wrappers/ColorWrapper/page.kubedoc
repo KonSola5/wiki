@@ -126,7 +126,7 @@ Corresponding color (`#AARRGGBB`)
 
 By default, these are the colors present in a map:
 
-| Color names       | <#corresponding-color>  |
+| Color names       | Corresponding color     |
 | <#transparent>    | `#00000000`             |
 | <#light-blue-dye> | [bg=#9AC0CD]`#FF9AC0CD` |
 | <#blue-dye>       | [bg=#0000FF]`#FF0000FF` |

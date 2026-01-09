@@ -126,8 +126,9 @@ Corresponding color (`#AARRGGBB`)
 
 By default, these are the colors present in a map:
 
-| Test table | Test |
-| One        | two  |
+| Test table     | Test                    |
+| One            | two                     |
+| <#transparent> | `#00000000`             |
 
 | Color names       | Corresponding color     |
 | <#transparent>    | `#00000000`             |

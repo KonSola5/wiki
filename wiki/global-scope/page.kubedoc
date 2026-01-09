@@ -1,11 +1,5 @@
 # Global objects
 
-| Name | Type | Description |
-| `global` | Map<String, Object> | Global object, you can use this to set objects and callbacks in startup script and reference them from server or client scripts |
-| `console` | Console | Console object, used for logging |
-| `SECOND` | number | 1000 |
-| `MINUTE` | number | 60000 (`60 * SECOND`) |
-| `HOUR` | number | 3600000 (`60 * MINUTE`) |
 ## `global`
 
 Serves as a way to create globally accessible values accessible across **all** script types.
@@ -15,10 +9,14 @@ A [[/ref/java/Map|`HashMap`]] with string keys whose values can be of any type.
 Only writable in [[folder-structure/startup-scripts|startup scripts]].
 Read-only in [[folder-structure/server-scripts|server scripts]] and [[folder-structure/client-scripts|client scripts]].
 
+---
+
 ## `console`
 
 **Value**
 A global `ConsoleJS` instance commonly used to log stuff.
+
+---
 
 # Global constants
 

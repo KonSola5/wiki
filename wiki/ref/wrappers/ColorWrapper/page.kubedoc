@@ -89,6 +89,8 @@ Converts any object that can be converted into a color into `ColorRGBA`. Use in 
 **Return value**
 A `ColorRGBA` instance representing the color.
 
+---
+
 # Static fields
 
 ### `MAP`
@@ -235,6 +237,8 @@ Color names are string literals that can be used in place of colors that will be
 | `[js]Color.LIGHT_GRAY_DYE` | <#light-gray-dye> |[bg=#D3D3D3]`#FFD3D3D3` |
 | `[js]Color.WHITE_DYE`      | <#white-dye>      |[bg=#FFFFFF]`#FFFFFFFF` |
 
+---
+
 ### `TEXT`
 
 ```js
@@ -245,6 +249,8 @@ Color.TEXT
 A `HashMap` with keys being strings corresponding to color value, and values being `ChatFormatting` enumerations.
 Note that `ChatFormatting` implements the `KubeColor` interface, so colors from `ChatFormatting` may be used in place of colors.
 
+---
+
 ### `DYE`
 
 ```js
@@ -254,6 +260,8 @@ Color.DYE
 **Value**
 A `HashMap` with keys being strings corresponding to color value, and values being `DyeColor` enumerations.
 Note that `DyeColor` implements the `KubeColor` interface, so colors from `DyeColor` may be used in place of colors.
+
+---
 
 # Source
 

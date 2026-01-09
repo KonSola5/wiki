@@ -1,0 +1,164 @@
+`Color` is a value-heavy interface mainly containing vanilla colors.
+It also has a few methods to create any arbitrary color for use in text, fireworks, etc.
+It's exposed to [[/global-scope|global scope]] as `Color`.
+
+# Static methods
+
+### `rgba`
+```js
+Color.rgba(red, green, blue, alpha)
+```
+**Parameters**
+
+**Returns**
+
+
+---
+
+# Static fields
+
+## `MAP`
+
+```js
+Color.MAP
+```
+
+**Value**
+A `HashMap` with keys being strings corresponding to color value, and values being `KubeColor` implementations.
+The keys are also the same strings that can be type wrapped into colors.
+
+>>> #corresponding-color
+Corresponding color (`#AARRGGBB`)
+<<<
+>>> #transparent
+`[js]''` (empty string), `[js]'-'`, `[js]'NONE'`, `[js]'none'`, `[js]'transparent'`
+<<<
+>>> #light-blue-dye
+`[js]'light_blue_dye'`, `[js]'LIGHT_BLUE_DYE'`, `[js]'lightBlueDye'`
+<<<
+>>> #blue-dye
+`[js]'blue_dye'`, `[js]'BLUE_DYE'`, `[js]'blueDye'` 
+<<<
+>>> #purple-dye
+`[js]'purple_dye'`, `[js]'PURPLE_DYE'`, `[js]'purpleDye'`
+<<<
+>>> #dark-red
+`[js]'DARK_RED'`, `[js]'dark_red'`, `[js]'darkRed'`
+<<<
+>>> #light-gray-dye
+`[js]'LIGHT_GRAY_DYE'`, `[js]'lightGrayDye'`
+<<<
+>>> #dark-aqua
+`[js]'DARK_AQUA'`, `[js]'dark_aqua'`, `[js]'darkAqua'`
+<<<
+>>> #green-dye
+`[js]'GREEN_DYE'`, `[js]'green_dye'`, `[js]'greenDye'`
+<<<
+>>> #black
+`[js]'BLACK'`, `[js]'BLACK_DYE'`, `[js]'black_dye'`, `[js]'black'`, `[js]'blackDye'`
+<<<
+>>> #dark-blue
+`[js]'DARK_BLUE'`, `[js]'dark_blue'`, `[js]'darkBlue'`
+<<<
+>>> #red
+`[js]'RED'`, `[js]'red'`
+<<<
+>>> #pink-dye
+`[js]'PINK_DYE'`, `[js]'pink_dye'`, `[js]'pinkDye'`
+<<<
+>>> #aqua
+`[js]'AQUA'`, `[js]'aqua'`
+<<<
+>>> #white-dye
+ `[js]'WHITE'`, `[js]'WHITE_DYE'`, `[js]'white_dye'`, `[js]'white'`, `[js]'whiteDye'`
+<<<
+>>> #dark-gray
+`[js]'DARK_GRAY'`, `[js]'dark_gray'`, `[js]'darkGray'`
+<<<
+>>> #light-purple
+`[js]'LIGHT_PURPLE'`, `[js]'light_purple'`, `[js]'lightPurple'`
+<<<
+>>> #brown-dye
+`[js]'BROWN_DYE'`, `[js]'brown_dye'`, `[js]'brownDye'`
+<<<
+>>> #dark-purple
+`[js]'DARK_PURPLE'`, `[js]'dark_purple'`, `[js]'darkPurple'`
+<<<
+>>> #lime-dye
+`[js]'LIME_DYE'`, `[js]'lime_dye'`, `[js]'limeDye'`
+<<<
+>>> #magenta-dye
+`[js]'MAGENTA_DYE'`, `[js]'magenta_dye'`, `[js]'magentaDye'`
+<<<
+>>> #yellow-dye
+`[js]'YELLOW_DYE'`, `[js]'yellow_dye'`, `[js]'yellowDye'`
+<<<
+>>> #gray-dye
+`[js]'GRAY_DYE'`, `[js]'gray_dye'`, `[js]'grayDye'`
+<<<
+>>> #orange-dye
+`[js]'ORANGE_DYE'`, `[js]'orange_dye'`, `[js]'orangeDye'`
+<<<
+>>> #yellow
+`[js]'YELLOW'`, `[js]'yellow'`
+<<<
+>>> #cyan-dye
+`[js]'CYAN_DYE'`, `[js]'cyan_dye'`, `[js]'cyanDye'`
+<<<
+>>> #gold
+`[js]'GOLD'`, `[js]'gold'`
+<<<
+>>> #gray
+`[js]'GRAY'`, `[js]'gray'`
+<<<
+>>> #blue
+`[js]'BLUE'`, `[js]'blue'`
+<<<
+>>> #red-dye
+`[js]'RED_DYE'`, `[js]'red_dye'`, `[js]'redDye'`
+<<<
+>>> #green
+`[js]'GREEN'`, `[js]'green'`, 
+<<<
+>>> #dark-green
+`[js]'DARK_GREEN'`, `[js]'dark_green'`, `[js]'darkGreen'`,
+<<<
+
+By default, these are the colors present in a map:
+
+| Color names       | <#corresponding-color>    |
+| <#transparent>    | [bg=#00000000]`#00000000` |
+| <#light-blue-dye> | [bg=#FF9AC0CD]`#FF9AC0CD` |
+| <#blue-dye>       | [bg=#FF0000FF]`#FF0000FF` |
+| <#purple-dye>     | [bg=#FFA020F0]`#FFA020F0` |
+| <#dark-red>       | [bg=#FFAA0000]`#FFAA0000` |
+| <#light-gray-dye> | [bg=#FFD3D3D3]`#FFD3D3D3` |
+| <#dark-aqua>      | [bg=#FF00AAAA]`#FF00AAAA` |
+| <#green-dye>      | [bg=#FF00FF00]`#FF00FF00` |
+| <#black>          | [bg=#FF000000]`#FF000000` |
+| <#dark-blue>      | [bg=#FF0000AA]`#FF0000AA` |
+| <#red>            | [bg=#FFFF5555]`#FFFF5555` |
+| <#pink-dye>       | [bg=#FFFF69B4]`#FFFF69B4` |
+| <#aqua>           | [bg=#FF55FFFF]`#FF55FFFF` |
+| <#white-dye>      | [bg=#FFFFFFFF]`#FFFFFFFF` |
+| <#dark-gray>      | [bg=#FF555555]`#FF555555` |
+| <#light-purple>   | [bg=#FFFF55FF]`#FFFF55FF` |
+| <#brown-dye>      | [bg=#FF8B4513]`#FF8B4513` |
+| <#dark-purple>    | [bg=#FFAA00AA]`#FFAA00AA` |
+| <#lime-dye>       | [bg=#FFBFFF00]`#FFBFFF00` |
+| <#magenta-dye>    | [bg=#FFFF00FF]`#FFFF00FF` |
+| <#yellow-dye>     | [bg=#FFFFFF00]`#FFFFFF00` |
+| <#gray-dye>       | [bg=#FF808080]`#FF808080` |
+| <#orange-dye>     | [bg=#FFFF681F]`#FFFF681F` |
+| <#yellow>         | [bg=#FFFFFF55]`#FFFFFF55` |
+| <#cyan-dye>       | [bg=#FF00FFFF]`#FF00FFFF` |
+| <#gold>           | [bg=#FFFFAA00]`#FFFFAA00` |
+| <#gray>           | [bg=#FFAAAAAA]`#FFAAAAAA` |
+| <#blue>           | [bg=#FF5555FF]`#FF5555FF` |
+| <#red-dye>        | [bg=#FFFF0000]`#FFFF0000` |
+| <#green>          | [bg=#FF55FF55]`#FF55FF55` |
+| <#dark-green>     | [bg=#FF00AA00]`#FF00AA00` |
+
+# Source
+
+([ColorWrapper.java](https://github.com/KubeJS-Mods/KubeJS/blob/main/src/main/java/dev/latvian/mods/kubejs/plugin/builtin/wrapper/ColorWrapper.java))

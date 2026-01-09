@@ -15,7 +15,7 @@ Color.rgba(red, green, blue, alpha)
 - `alpha`: An integer between `[js]0` and `[js]255` (`[js]0x00` and `[js]0xFF`) representing the transparency of color. `[js]0` is fully transparent, `[js]255` is fully opaque.
 
 **Return value**
-A new `KubeColor` instance representing the color.
+A new [[/ref/utils/KubeColor|`KubeColor`]] instance representing the color.
 
 ---
 
@@ -30,11 +30,11 @@ Adds a new color to the `[js]Color.MAP` map.
 Recommended to use only in startup scripts to ensure that it will only run once.
 
 **Parameters**
-- `[js]color`: Any object. Will be converted to `KubeColor` during the process of adding the color.
+- `[js]color`: Any object. Will be converted to [[/ref/utils/KubeColor|`KubeColor`]] during the process of adding the color.
 - `[js]name1`, …, `[js]nameN`: String names that may represent the color.
 
 **Return value**
-A `KubeColor` instance representing the just-added color.
+A [[/ref/utils/KubeColor|`KubeColor`]] instance representing the just-added color.
 From now on, the color may be represented as the provided strings in places where color is expected.
 
 **Example**
@@ -68,7 +68,7 @@ Color.wrapTextColor(object)
 Converts any object that can be converted into a color into `TextColor`. Use in scenarios, where color can't be implicitly converted into a `TextColor`.
 
 **Parameters**
-- `[js]object`: Any object. Will be converted to `KubeColor`.
+- `[js]object`: Any object. Will be converted to [[/ref/utils/KubeColor|`KubeColor`]].
 
 **Return value**
 A `TextColor` instance representing the color.
@@ -84,7 +84,7 @@ Color.wrapColorRGBA(object)
 Converts any object that can be converted into a color into `ColorRGBA`. Use in scenarios, where color can't be implicitly converted into a `ColorRGBA`.
 
 **Parameters**
-- `[js]object`: Any object. Will be converted to `KubeColor`.
+- `[js]object`: Any object. Will be converted to [[/ref/utils/KubeColor|`KubeColor`]].
 
 **Return value**
 A `ColorRGBA` instance representing the color.
@@ -100,7 +100,7 @@ Color.MAP
 ```
 
 **Value**
-A `HashMap` with keys being strings corresponding to color value, and values being `KubeColor` implementations.
+A `HashMap` with keys being strings corresponding to color value, and values being [[/ref/utils/KubeColor|`KubeColor`]] implementations.
 The keys are also the same strings that can be type wrapped into colors.
 
 >>> #corresponding-color
@@ -201,8 +201,8 @@ Corresponding color (`#AARRGGBB`)
 <<<
 
 The table below, sorted by hue, describes the colors that are present by default in `Colors.MAP`.
-Static fields corresponding to the color get the `KubeColor` directly.
-Color names are string literals that can be used in place of colors that will be implicitly converted to `KubeColor` when one is expected.
+Static fields corresponding to the color get the [[/ref/utils/KubeColor|`KubeColor`]] directly.
+Color names are string literals that can be used in place of colors that will be implicitly converted to [[/ref/utils/KubeColor|`KubeColor`]] when one is expected.
 
 | Static field               | Color name        | <#corresponding-color> |
 | `[js]Color.NONE`           | <#transparent>    | `#00000000`            |
@@ -247,7 +247,7 @@ Color.TEXT
 
 **Value**
 A `HashMap` with keys being strings corresponding to color value, and values being `ChatFormatting` enumerations.
-Note that `ChatFormatting` implements the `KubeColor` interface, so colors from `ChatFormatting` may be used in place of colors.
+Note that `ChatFormatting` implements the [[/ref/utils/KubeColor|`KubeColor`]] interface, so colors from `ChatFormatting` may be used in place of colors.
 
 ---
 
@@ -259,7 +259,7 @@ Color.DYE
 
 **Value**
 A `HashMap` with keys being strings corresponding to color value, and values being `DyeColor` enumerations.
-Note that `DyeColor` implements the `KubeColor` interface, so colors from `DyeColor` may be used in place of colors.
+Note that `DyeColor` implements the [[/ref/utils/KubeColor|`KubeColor`]] interface, so colors from `DyeColor` may be used in place of colors.
 
 ---
 

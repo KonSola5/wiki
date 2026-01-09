@@ -126,38 +126,38 @@ Corresponding color (`#AARRGGBB`)
 
 By default, these are the colors present in a map:
 
-| Color names       | <#corresponding-color>    |
-| <#transparent>    | [bg=#00000000]`#00000000` |
-| <#light-blue-dye> | [bg=#FF9AC0CD]`#FF9AC0CD` |
-| <#blue-dye>       | [bg=#FF0000FF]`#FF0000FF` |
-| <#purple-dye>     | [bg=#FFA020F0]`#FFA020F0` |
-| <#dark-red>       | [bg=#FFAA0000]`#FFAA0000` |
-| <#light-gray-dye> | [bg=#FFD3D3D3]`#FFD3D3D3` |
-| <#dark-aqua>      | [bg=#FF00AAAA]`#FF00AAAA` |
-| <#green-dye>      | [bg=#FF00FF00]`#FF00FF00` |
-| <#black>          | [bg=#FF000000]`#FF000000` |
-| <#dark-blue>      | [bg=#FF0000AA]`#FF0000AA` |
-| <#red>            | [bg=#FFFF5555]`#FFFF5555` |
-| <#pink-dye>       | [bg=#FFFF69B4]`#FFFF69B4` |
-| <#aqua>           | [bg=#FF55FFFF]`#FF55FFFF` |
-| <#white-dye>      | [bg=#FFFFFFFF]`#FFFFFFFF` |
-| <#dark-gray>      | [bg=#FF555555]`#FF555555` |
-| <#light-purple>   | [bg=#FFFF55FF]`#FFFF55FF` |
-| <#brown-dye>      | [bg=#FF8B4513]`#FF8B4513` |
-| <#dark-purple>    | [bg=#FFAA00AA]`#FFAA00AA` |
-| <#lime-dye>       | [bg=#FFBFFF00]`#FFBFFF00` |
-| <#magenta-dye>    | [bg=#FFFF00FF]`#FFFF00FF` |
-| <#yellow-dye>     | [bg=#FFFFFF00]`#FFFFFF00` |
-| <#gray-dye>       | [bg=#FF808080]`#FF808080` |
-| <#orange-dye>     | [bg=#FFFF681F]`#FFFF681F` |
-| <#yellow>         | [bg=#FFFFFF55]`#FFFFFF55` |
-| <#cyan-dye>       | [bg=#FF00FFFF]`#FF00FFFF` |
-| <#gold>           | [bg=#FFFFAA00]`#FFFFAA00` |
-| <#gray>           | [bg=#FFAAAAAA]`#FFAAAAAA` |
-| <#blue>           | [bg=#FF5555FF]`#FF5555FF` |
-| <#red-dye>        | [bg=#FFFF0000]`#FFFF0000` |
-| <#green>          | [bg=#FF55FF55]`#FF55FF55` |
-| <#dark-green>     | [bg=#FF00AA00]`#FF00AA00` |
+| Color names       | <#corresponding-color>  |
+| <#transparent>    | `#00000000`             |
+| <#light-blue-dye> | [bg=#9AC0CD]`#FF9AC0CD` |
+| <#blue-dye>       | [bg=#0000FF]`#FF0000FF` |
+| <#purple-dye>     | [bg=#A020F0]`#FFA020F0` |
+| <#dark-red>       | [bg=#AA0000]`#FFAA0000` |
+| <#light-gray-dye> | [bg=#D3D3D3]`#FFD3D3D3` |
+| <#dark-aqua>      | [bg=#00AAAA]`#FF00AAAA` |
+| <#green-dye>      | [bg=#00FF00]`#FF00FF00` |
+| <#black>          | [bg=#000000]`#FF000000` |
+| <#dark-blue>      | [bg=#0000AA]`#FF0000AA` |
+| <#red>            | [bg=#FF5555]`#FFFF5555` |
+| <#pink-dye>       | [bg=#FF69B4]`#FFFF69B4` |
+| <#aqua>           | [bg=#55FFFF]`#FF55FFFF` |
+| <#white-dye>      | [bg=#FFFFFF]`#FFFFFFFF` |
+| <#dark-gray>      | [bg=#555555]`#FF555555` |
+| <#light-purple>   | [bg=#FF55FF]`#FFFF55FF` |
+| <#brown-dye>      | [bg=#8B4513]`#FF8B4513` |
+| <#dark-purple>    | [bg=#AA00AA]`#FFAA00AA` |
+| <#lime-dye>       | [bg=#BFFF00]`#FFBFFF00` |
+| <#magenta-dye>    | [bg=#FF00FF]`#FFFF00FF` |
+| <#yellow-dye>     | [bg=#FFFF00]`#FFFFFF00` |
+| <#gray-dye>       | [bg=#808080]`#FF808080` |
+| <#orange-dye>     | [bg=#FF681F]`#FFFF681F` |
+| <#yellow>         | [bg=#FFFF55]`#FFFFFF55` |
+| <#cyan-dye>       | [bg=#00FFFF]`#FF00FFFF` |
+| <#gold>           | [bg=#FFAA00]`#FFFFAA00` |
+| <#gray>           | [bg=#AAAAAA]`#FFAAAAAA` |
+| <#blue>           | [bg=#5555FF]`#FF5555FF` |
+| <#red-dye>        | [bg=#FF0000]`#FFFF0000` |
+| <#green>          | [bg=#55FF55]`#FF55FF55` |
+| <#dark-green>     | [bg=#00AA00]`#FF00AA00` |
 
 # Source
 

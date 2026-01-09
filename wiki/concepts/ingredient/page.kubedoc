@@ -81,24 +81,24 @@ For this reason, we do __not__ allow using Ingredient in contexts where ItemStac
 
 - `[js]ingredient.and(other)`:
   - `other` - Another ingredient.
-  - **Returns**: An ingredient accepting items that match both this ingredient and `other`.
+  - **Return value**: An ingredient accepting items that match both this ingredient and `other`.
 - `[js]ingredient.or(other)`: 
   - `other` - Another ingredient.
-  - **Returns**: An ingredient accepting items that match this ingredient or `other`.
+  - **Return value**: An ingredient accepting items that match this ingredient or `other`.
 - `[js]ingredient.except(other)`:
   - `other` - Another ingredient.
-  - **Returns**: An ingredient accepting items that match this ingredient, but not `other`.
+  - **Return value**: An ingredient accepting items that match this ingredient, but not `other`.
 - `[js]ingredient.withCount(count)`
   - `count` - An integer specifying count of the ingredient.
-  - **Returns**: a `SizedIngredient` of this ingredient with the given count
+  - **Return value**: a `SizedIngredient` of this ingredient with the given count
 - `[js]ingredient.asStack()`
-  - **Returns**: a `SizedIngredient` of size 1, equivalent to `[js]ingredient.withCount(1)`
+  - **Return value**: a `SizedIngredient` of size 1, equivalent to `[js]ingredient.withCount(1)`
 - `[js]ingredient.test(item)`:
   - `item`: The `ItemStack` to test whether it is a part of the ingredient.
-  - **Returns**: `true` if the provided item stack matches this ingredient, `false` otherwise. **This resolves the ingredient!**
+  - **Return value**: `true` if the provided item stack matches this ingredient, `false` otherwise. **This resolves the ingredient!**
 - `[js]ingredient.getItems()`
 - `[js]ingredient.getStackArray()`
-  - **Returns**: An array of all ItemStacks that match the ingredient. **This resolves the ingredient!**
+  - **Return value**: An array of all ItemStacks that match the ingredient. **This resolves the ingredient!**
 
 >>> info
 Also available as **read-only** beans: `[js]ingredient.items`, `[js]ingredient.stackArray`.
@@ -106,14 +106,14 @@ Also available as **read-only** beans: `[js]ingredient.items`, `[js]ingredient.s
 
 - `[js]ingredient.getStacks()`
 - `[js]ingredient.getDisplayStacks()`
-  - **Returns**: An ItemStackSet of all ItemStacks that match the ingredient. **This resolves the ingredient!**
+  - **Return value**: An ItemStackSet of all ItemStacks that match the ingredient. **This resolves the ingredient!**
 
 >>> info
 Also available as **read-only** beans: `[js]ingredient.stacks`, `[js]ingredient.displayStacks`.
 <<<
 
 - `[js]ingredient.getFirst()`:
-- **Returns**: The first stack that matches the ingredient. **This resolves the ingredient!**
+- **Return value**: The first stack that matches the ingredient. **This resolves the ingredient!**
 
 >>> info
 Also available as a **read-only** bean: `[js]ingredient.first`.

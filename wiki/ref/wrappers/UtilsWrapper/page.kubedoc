@@ -12,7 +12,7 @@ Utils.getRandom()
 Utils.random // read-only bean
 ```
 
-**Returns**
+**Return value**
 The shared instance of `RandomSource` to generate random numbers from.
 This method will always return the same `RandomSource` instance.
 
@@ -24,7 +24,7 @@ This method will always return the same `RandomSource` instance.
 Utils.newRandom()
 ```
 
-**Returns**
+**Return value**
 A **new** instance of `RandomSource` to generate random numbers from.
 
 ---
@@ -44,7 +44,7 @@ Note that unlike `RandomSource` obtained via `[js]Utils.getRandom()` or `[js]Uti
 - <#random>
 - `[js]collection` - Any Java collection. This includes all sorts of lists, but not maps. It may be also a JS array, like `[js]\['one', 'two', 'three'\]`.
 
-**Returns**
+**Return value**
 A random element from the collection.
 
 ---
@@ -56,7 +56,7 @@ A random element from the collection.
 ```js
 Utils.emptyList()
 ```
-**Returns**
+**Return value**
 A new empty, immutable (read-only) `ArrayList`.
 
 ---
@@ -66,7 +66,7 @@ A new empty, immutable (read-only) `ArrayList`.
 ```js
 Utils.emptyMap()
 ```
-**Returns**
+**Return value**
 A new empty, immutable (read-only) `Map`.
 
 ---
@@ -76,7 +76,7 @@ A new empty, immutable (read-only) `Map`.
 ```js
 Utils.newList()
 ```
-**Returns**
+**Return value**
 A new empty, mutable `ArrayList`.
 
 ---
@@ -86,7 +86,7 @@ A new empty, mutable `ArrayList`.
 ```js
 Utils.newMap()
 ```
-**Returns**
+**Return value**
 A new empty, mutable `LinkedHashMap`.
 
 ---
@@ -96,7 +96,7 @@ A new empty, mutable `LinkedHashMap`.
 ```js
 Utils.newCountingMap()
 ```
-**Returns**
+**Return value**
 A new empty, mutable `CountingMap`.
 
 ---
@@ -116,7 +116,7 @@ Utils.regex(regexLike)
   - A Java character sequence (that includes Java strings)
   - A Java [`Pattern`]({pattern-link}).
 
-**Returns**
+**Return value**
 If the `[js]regexLike` was:
 - a [`Pattern`]({pattern-link}) - returns the same Pattern
 - a [`RegExp`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) - returns a `Pattern` corresponding to the RegExp,
@@ -134,7 +134,7 @@ Utils.regex(regexString, flags)
 - `[js]regexString`: A string that represents the regular expression pattern.
 - `[js]flags`: A bit mask of regular expression flags to use. See the field summary of the [`Pattern`]({pattern-link}) class to learn more.
 
-**Returns**
+**Return value**
 
 A new [`Pattern`]({pattern-link}) with the given pattern and flags.
 
@@ -162,7 +162,7 @@ Stats are referred to by **reference**, not by resource location's string value.
 Unless you are making your own stat and have a reference to `ResourceLocation` on hand, do not use this method.
 <<<
 
-**Returns**
+**Return value**
 A `Stat` coming from the `CUSTOM` field corresponding to the provided `id`.
 
 ---
@@ -176,7 +176,7 @@ Utils.getSound(id)
 **Parameters**
 - `[js]id`: The sound's resource location. It may be a string.
 
-**Returns**
+**Return value**
 A `SoundEvent` corresponding to the given `id`, or `[js]null` if the sound event doesn't exist under the provided ID.
 
 ---
@@ -190,7 +190,7 @@ Utils.findCreativeTab(id)
 **Parameters**
 - `[js]id`: The creative tab's resource location. It may be a string representing the creative mode tab, for example `[js]'minecraft:building_blocks'`.
 
-**Returns**
+**Return value**
 A `CreativeModeTab` corresponding to the given `id`, or `[js]null` if the creative mode tab doesn't exist under the provided ID.
 
 ---
@@ -208,7 +208,7 @@ Creates a lazy supplier. After the first `get` call to the resulting supplier, i
 **Parameters**
 - `[js]supplier`: A [[/ref/java/functional-interface/Supplier|`Supplier`]]. It may be a JS function that takes no parameters and returns a value, for example `[js]() => { return 42 }`.
 
-**Returns**
+**Return value**
 A [[/ref/java/utils/Lazy|`Lazy`]] supplier corresponding to the given `[js]supplier`.
 
 ---
@@ -227,7 +227,7 @@ Creates an expiring lazy supplier. Its [memoized](https://en.wikipedia.org/wiki/
   - a number representing milliseconds, for example `[js]2000`,
   - or a string representing a duration, with format being the one used in [`Duration#parse`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html#parse(java.lang.CharSequence)) static method. For example, `[js]'PT2S'` represents a duration of 2 seconds.
 
-**Returns**
+**Return value**
 A [[/ref/java/utils/Lazy|`Lazy`]] supplier corresponding to the given `[js]supplier`, which forgets about its [memoized](https://en.wikipedia.org/wiki/Memoization) value after the specified `[js]duration`.
 
 ---
@@ -243,7 +243,7 @@ Runs the provided runnable function in KubeJS' background thread.
 **Parameters**
 - `[js]runnable`: Any Java class that implements the [`Runnable`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html) interface. It may be also a JS function that takes no arguments and doesn't return anything, for example `[js]() => { console.log('Ran asynchronously!') }`
 
-**Returns**
+**Return value**
 A [`CompletableFuture`]({future-link}) representing the eventual completion or failure of the asynchronous call.
 The return type of this asynchronous call is `void` (does not return anything).
 (`CompletableFuture` in Java fulfills similar role to [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) found in JavaScript)
@@ -261,7 +261,7 @@ Runs the provided supplier function in KubeJS' background thread.
 **Parameters**
 - `[js]supplier`: A [[/ref/java/functional-interface/Supplier|`Supplier`]]. It may be also a JS function that takes no arguments and returns a value, for example `[js]() => { return 'Asynchronously supplied!' }`
 
-**Returns**
+**Return value**
 A [`CompletableFuture`]({future-link}) representing the eventual completion or failure of the asynchronous call.
 The return type of this asynchronous call is `Object` (represents anything that the provided `supplier` can supply).
 (`CompletableFuture` in Java fulfills similar role to [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) found in JavaScript)
@@ -276,7 +276,7 @@ Utils.getSystemTime()
 Utils.systemTime // read-only bean
 ```
 
-**Returns**
+**Return value**
 The difference between current time and midnight, January 1, 1970, UTC, in milliseconds.
 Also known as [Unix time](https://en.wikipedia.org/wiki/Unix_time).
 
@@ -288,7 +288,7 @@ Also known as [Unix time](https://en.wikipedia.org/wiki/Unix_time).
 Utils.isWrapped(object)
 ```
 
-**Returns**
+**Return value**
 `[js]true` if object's class implements the [`WrappedJS`](https://github.com/KubeJS-Mods/KubeJS/blob/main/src/main/java/dev/latvian/mods/kubejs/util/WrappedJS.java) marker interface, `[js]false` if it does not.
 
 ---

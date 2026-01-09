@@ -39,7 +39,7 @@ Also note that while possible in some older versions of KubeJS, [[/concepts/ingr
 
 ## Useful Methods and Properties
 - `[js]item.getBlock()`:
-  - **Returns**: The associated `Block` is the item corresponds to a block (that is - is an instance of `BlockItem`), otherwise `null`.
+  - **Return value**: The associated `Block` is the item corresponds to a block (that is - is an instance of `BlockItem`), otherwise `null`.
 >>>info
 Also available as a **read-only** bean: `item.block`.
 <<<
@@ -57,15 +57,15 @@ Also available as a getter `[js]item.setCount(count)` and setter `[js]item.getCo
 
 - `[js]item.withCount(count)`
   - `count` - The stack size of the new item stack.
-  - **Returns** - A copy of the `item` with stack size of `count`.
+  - **Return value** - A copy of the `item` with stack size of `count`.
 
 - `[js]item.areItemsEqual(other)`:
   - `other`: An `ItemStack` to compare to.
-  - **Returns** `true` if `item` and `other` relate to the same item type, `false` otherwise.
+  - **Return value** `true` if `item` and `other` relate to the same item type, `false` otherwise.
 
 - `[js]item.areComponentsEqual(other)`: 
   - `other`: An `ItemStack` to compare to.
-  - **Returns** `true` if `item` and `other` relate to the same item and have **identical components**, `false` otherwise.
+  - **Return value** `true` if `item` and `other` relate to the same item and have **identical components**, `false` otherwise.
 
 ## Registry Object Functions
 These functions are all inherited from `Item`.
@@ -85,7 +85,7 @@ Described here will be **read-only** beans, but be aware that for the `x` bean, 
 
 - `[js]item.hasTag(tag)`: Checks if this item has a certain tag.
   - `tag` - A `ResourceLocation` or a string corresponding to a tag (for example `minecraft:logs`).
-  - **Returns**: `true` if the item has `tag` as a tag, `false` otherwise.
+  - **Return value**: `true` if the item has `tag` as a tag, `false` otherwise.
 
 ## Component Functions
 WIP! (TODO: make a page on Components and KubeJS' ComponentFunctions interface)
@@ -96,14 +96,14 @@ WIP! (TODO: make a page on Components and KubeJS' ComponentFunctions interface)
 - `[js]item.hasEnchantment(enchantment, level)`:
   - `enchantment`: The enchantment to check for. It may be a string representing an enchantment (like `minecraft:efficiency`).
   - `level`: The level to compare to.
-  - **Returns**: `true` if the item has the given enchantment at a given level or higher, `false` otherwise.
+  - **Return value**: `true` if the item has the given enchantment at a given level or higher, `false` otherwise.
 - `[js]item.enchant(enchantment, level)`:
   - `enchantment`: The enchantment to check for. It may be a string representing an enchantment (like `minecraft:efficiency`).
   - `level`: The level of the enchantment
-  - **Returns**: A copy of `item` with the enchantment applied. Only enchantments that were not present on the `item` already or that were below the level applied will be changed.
+  - **Return value**: A copy of `item` with the enchantment applied. Only enchantments that were not present on the `item` already or that were below the level applied will be changed.
 - `[js]item.enchant(enchantments)`:
   - `enchantments`: The enchantments to apply. It may be an object with keys being strings representing enchantments and values being the levels of enchantments.
-  - **Returns**: A copy of `item` with the enchantments applied. Only enchantments that were not present on the `item` already or that were below the level applied will be changed.
+  - **Return value**: A copy of `item` with the enchantments applied. Only enchantments that were not present on the `item` already or that were below the level applied will be changed.
   
 Example:  
 ```js
@@ -119,21 +119,21 @@ const enchItem = item.enchant({
 - `[js]item.getHarvestSpeed()`:
 - `[js]item.getHarvestSpeed(block)`:
   - `block` {optional}: The `Block` to check the harvest speed against.
-  - **Returns**: The harvest speed of the item against a given block, or its default harvest speed if `block` isn't provided.
+  - **Return value**: The harvest speed of the item against a given block, or its default harvest speed if `block` isn't provided.
 - `[js]item.toItemString()`:
-  - **Returns**: A KubeJS string representation of an ItemStack.  
+  - **Return value**: A KubeJS string representation of an ItemStack.  
   Essentially does the reverse of an item wrapper, for example:
   For an `item` being a stack of 64 Sand, `[js]item.toItemString()` returns `[js]'64x minecraft:sand'`. 
 - `[js]item.asIngredient()`
-  - **Returns**: An `Ingredient` which matches the `item`.
+  - **Return value**: An `Ingredient` which matches the `item`.
 
 - `[js]item.withCustomName(name)`: 
   - `name` - A text `Component` to apply as custom name. It may be a plain string, for example: `[js]'My custom item!'`
-  - **Returns**: A copy of `item` with `minecraft:custom_name` data component applied.
+  - **Return value**: A copy of `item` with `minecraft:custom_name` data component applied.
 - `[js]item.withLore(lore)`: Copies this item stack with the specified lore text
   - `lore` - An **array** of text `Component`s to apply as lore. Components in the array may be plain strings.
   - For example: `[js]\['Some cool lore!', 'KubeJS rocks!'\]`
-  - **Returns**: A copy of `item` with `minecraft:lore` data component applied.
+  - **Return value**: A copy of `item` with `minecraft:lore` data component applied.
 
 - `[js]item.typeData`: ??? (is this just a custom map for scripters to use to attach data to item definitions?)
 # Further Reading

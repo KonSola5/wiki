@@ -17,7 +17,7 @@ Parses a 32-bit integer (`int`) from a given object.
 **Parameters**
 - `[js]object` - Any object. If it isn't a number, it will be converted to string.
 - `[js]fallback` - The number that will be returned if parsing fails.
-**Returns**
+**Return value**
 The parsed `int` if the object can be converted to string that represents a 32-bit integer.
 If the object is `[js]null`, gets converted into an empty string or parsing fails, returns the `[js]fallback` number as a 32-bit integer.
 
@@ -34,7 +34,7 @@ Parses a 64-bit integer (`long`) from a given object.
 **Parameters**
 - `[js]object` - Any object. If it isn't a number, it will be converted to string.
 - `[js]fallback` - The number that will be returned if parsing fails.
-**Returns**
+**Return value**
 The parsed `long` if the object can be converted to string that represents a 64-bit integer.
 If the object is `[js]null`, gets converted into an empty string or parsing fails, returns the `[js]fallback` number as a 64-bit integer.
 
@@ -58,7 +58,7 @@ Parses a 64-bit floating point number (`double`) from a given object.
 **Parameters**
 - `[js]object` - Any object. If it isn't a number, it will be converted to string.
 - `[js]fallback` - The number that will be returned if parsing fails.
-**Returns**
+**Return value**
 The parsed `double` if the object can be converted to string that represents a 64-bit floating point number.
 If the object is `[js]null`, gets converted into an empty string or parsing fails, returns the `[js]fallback` number as a 64-bit floating point number.
 
@@ -79,7 +79,7 @@ For example, `[js]event.recipes.create.mechanical_crafting` gets exposed as `[js
 **Parameters**
 - `[js]string` - The string in [`snake_case`](https://en.wikipedia.org/wiki/Snake_case) to process
 
-**Returns**
+**Return value**
 The string in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case).
 
 **Example**
@@ -104,7 +104,7 @@ For example, `kubejs:my_item` will get "My Item" as an implicit display name.
 **Parameters**
 - `[js]string` - The string in [`snake_case`](https://en.wikipedia.org/wiki/Snake_case) to process
 
-**Returns**
+**Return value**
 The string in [Title Case](https://en.wikipedia.org/wiki/Title_case).
 
 **Example**
@@ -129,7 +129,7 @@ Articles and prepositions like "a", "an", "the", "of", "on", "in", "and", "or", 
 - `[js]string` - The string in [`snake_case`](https://en.wikipedia.org/wiki/Snake_case) to process
 - `[js]ignoreSpecial` {optional} - Whether to ignore special cases involving articles and prepositions. Defaults to `[js]false` if not provided.
 
-**Returns**
+**Return value**
 The processed string.
 
 **Example**
@@ -152,7 +152,7 @@ Converts all `/` and `:` characters into `.`, and all `-` characters into `_`.
 **Parameters**
 - `[js]string` - The string to process
 
-**Returns**
+**Return value**
 The processed string.
 
 ---
@@ -168,7 +168,7 @@ Converts the provided ID (as ResourceLocation) to string and in that string, con
 **Parameters**
 - `[js]id` - A `ResourceLocation`. It may be a string representing a resource location, like `minecraft:iron_pickaxe`.
 
-**Returns**
+**Return value**
 The processed string.
 
 ---
@@ -184,7 +184,7 @@ Used internally by KubeJS to generate random, unique IDs for recipes that don't 
 **Parameters**
 - `[js]json` - A `JsonElement`. It may be a JS object or array (?).
 
-**Returns**
+**Return value**
 The hash of JSON as string.
 
 ---
@@ -197,7 +197,7 @@ StringUtils.getUniqueId(object, toJsonFunction)
 - `[js]object` - Object of any type.
 - `[js]toJsonFunction` - A function that takes the `[js]object` and returns a `[js]JsonElement`. It may be a JS function, but be aware that it must return a Java `[js]JsonElement`, not a JS object!
 
-**Returns**
+**Return value**
 The hash of JSON created as a result of conversion of `[js]object` to JsonObject as string.
 
 # Static fields

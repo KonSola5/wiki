@@ -15,7 +15,7 @@ Item.of(itemStack, count, components)
 **Optional parameters**:
 - `[js]components` - A map of components. Can be a string representing key-value pairs: `damage=2, item_name={text:"Hello world"}`.
 - `[js]count` - An integer, representing the size of the item stack.
-**Returns**
+**Return value**
 A new [[/concepts/item-stack|ItemStack]].
 
 ---
@@ -27,7 +27,7 @@ Item.getList()
 Item.list // Bean
 ```
 
-**Returns**
+**Return value**
 A list of most items (as [[/concepts/item-stack|ItemStack]]s) in the game. Items, that are not in a creative tab are ignored.
 
 ---
@@ -39,7 +39,7 @@ Item.getTypeList()
 Item.typeList // Bean
 ```
 
-**Returns**
+**Return value**
 A list of all the namespaced item IDs in the game as strings.
 
 ---
@@ -51,7 +51,7 @@ Item.getTypeToStackMap()
 Item.typeToStackMap // Bean
 ```
 
-**Returns**
+**Return value**
 A map between ResourceLocations and collections of variants of [[/concepts/item-stack|ItemStack]].
 
 ---
@@ -63,7 +63,7 @@ Item.getVariants(itemStack)
 ```
 **Parameters**
 - `[js]itemStack` - an [[/concepts/item-stack|ItemStack]].
-**Returns**
+**Return value**
 A collection of variants of the given [[/concepts/item-stack|ItemStack]].
 
 ---
@@ -75,7 +75,7 @@ Item.getEmpty()
 Item.empty // Read-only bean
 ```
 
-**Returns**
+**Return value**
 - An [[/concepts/item-stack|ItemStack]] that represents an empty slot or air.
 
 ---
@@ -89,7 +89,7 @@ Item.fireworks(fireworkProperties)
 **Parameters**
 - `[js]fireworkProperties` - The [[/ref/records/Fireworks|firework properties]] to use.
 
-**Returns**
+**Return value**
 If `fireworkProperties` was already an instance of [[/ref/records/Fireworks|`Fireworks`]], it returns the same [[/ref/records/Fireworks|`Fireworks`]].
 If `fireworkProperties` was an object or an array, it returns the [[/ref/records/Fireworks|`Fireworks`]] instance created from the object/array.
 
@@ -119,7 +119,7 @@ Item.getItem(id)
 
 **Parameters**
 - `[js]id` - a ResourceLocation instance or a string representing a resource location, like `'minecraft:diamond_sword'`.
-**Returns**
+**Return value**
 An [[/concepts/item|Item]] instance.
 
 ---
@@ -132,7 +132,7 @@ Item.getID(item)
 
 **Parameters**
 - `[js]item` - an [[/concepts/item|Item]].
-**Returns**
+**Return value**
 An ResourceLocation of the item.
 
 ---
@@ -146,7 +146,7 @@ Item.exists(id)
 **Parameters**
 - `[js]id` - a ResourceLocation instance or a string representing a resource location, like `'minecraft:diamond_sword'`.
 
-**Returns**
+**Return value**
 `true` if the item corresponding to the ID exists, `false` otherwise.
 
 ---
@@ -160,7 +160,7 @@ Item.isItem(object)
 **Parameters**
 - `[js]object` - Any object.
 
-**Returns**
+**Return value**
 `true` if the object is an instance of [[/concepts/item-stack|ItemStack]], `false` otherwise.
 
 ---
@@ -174,7 +174,7 @@ Item.playerHead(nickname)
 **Parameters**
 - `[js]nickname` - A nickname of a player to get their head.
 
-**Returns**
+**Return value**
 A player head with the `minecraft:profile` data component applied.
 
 ---
@@ -189,7 +189,7 @@ Item.playerHeadfromBase64(uuid, textureBase64)
 - `[js]uuid` - A non-null UUID.
 - `[js]textureBase64` - Texture data JSON to apply to the head, encoded in Base64.
 
-**Returns**
+**Return value**
 A player head with the `minecraft:profile` data component applied.
 
 ---
@@ -202,7 +202,7 @@ Item.playerHeadFromUrl(url)
 
 **Parameters**
 - `[js]url` - A URL leading to the texture data JSON to apply to the head.
-**Returns**
+**Return value**
 A player head with the `minecraft:profile` data component applied.
 
 ---
@@ -215,7 +215,7 @@ Item.playerHeadfromStringHash(stringHash)
 
 **Parameters**
 - `[js]stringHash` - A string hash of the player to get the texture data JSON from.
-**Returns**
+**Return value**
 A player head with the `minecraft:profile` data component applied.
 
 # Source

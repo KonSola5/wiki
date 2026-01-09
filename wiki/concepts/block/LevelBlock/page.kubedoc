@@ -142,19 +142,19 @@ Will get an empty list if the block is not on a server-side world.
 - `[js]block.getInventory()`
 - `[js]block.getInventory(direction)`
   - `[js]direction` {optional}: A `Direction`. In can be a string representing a direction, for example `[js]'north'`. Defaults to `[js]'up'` if not provided.
-  - **Returns**: The block's inventory (as `InventoryKJS`) accessible from the specified side. Will get `[js]null` if the block does not have an inventory.
+  - **Return value**: The block's inventory (as `InventoryKJS`) accessible from the specified side. Will get `[js]null` if the block does not have an inventory.
 
 - `[js]block.getDrops()`
 - `[js]block.getDrops(entity, heldItem)`
   - `[js]entity`: The [[/concepts/entity|`Entity`]] that would break the block. Defaults to `[js]null` if not provided. There's no overload without `heldItem`, so it must be provided too, regardless whether you want to use an item or not.
   - `[js]heldItem`: The held item (as [[/concepts/item-stack|ItemStack]]) that would break the block. Defaults to air if not provided.
-  - **Returns**: The block's drops as a list of [[/concepts/item-stack|ItemStacks]], if the block is on a server-side world, an empty list otherwise.
+  - **Return value**: The block's drops as a list of [[/concepts/item-stack|ItemStacks]], if the block is on a server-side world, an empty list otherwise.
   - This method doesn't break the block, it just simulates the drops for that block.
 
 - `[js]block.getPlayersInRadius()`
 - `[js]block.getPlayersInRadius(radius)`
   - `[js]radius` {optional}: The radius around the `block` to search players for. Defaults to `8` if not provided.
-  - **Returns**: All players found (as a list of [[/concepts/entity|Entities]]), excluding fake players.
+  - **Return value**: All players found (as a list of [[/concepts/entity|Entities]]), excluding fake players.
   - ==Guarantee==: Entities in this list are guaranteed to be [[/concepts/player|Players]], so documentation for [[/concepts/player|Player]] applies to those entities as well.
 
 ### Other methods
@@ -165,18 +165,18 @@ Will get an empty list if the block is not on a server-side world.
   - `[js]amount` {optional}: Amount of blocks to move away from the `block`. Defaults to `1` if not provided.
 - `[js]block.offset(x, y, z)`
   - `[js]x`, `[js]y`, `[js]z`: Amount of blocks to move from the `block` in x, y and z directions respectively.
-  - **Returns**: A `LevelBlock` representing a block at a specified offset.
+  - **Return value**: A `LevelBlock` representing a block at a specified offset.
 
 - `[js]block.mergeEntityData(entityData)`
   - `[js]entityData`: The block entity data (as `CompoundTag`) to merge with existing entity data.
 
 - `[js]block.explode(explosionProperties)`
   - `[js]explosionProperties`: The [[/ref/records/ExplosionProperties|explosion properties]] to use.
-  - **Returns**: An `Explosion` object. Also creates an explosion at the location of the block.
+  - **Return value**: An `Explosion` object. Also creates an explosion at the location of the block.
 
 - `[js]block.createEntity(entityType)`
   - `[js]entityType`: The type of entity to create. It may be a string representing an entity, for example `[js]'minecraft:creeper'`
-  - **Returns**: An new [[/concepts/entity|`Entity`]] object with its position set to the position of the `block` (not its center!). Of course, you still need to spawn the entity, so don't discard the return type!
+  - **Return value**: An new [[/concepts/entity|`Entity`]] object with its position set to the position of the `block` (not its center!). Of course, you still need to spawn the entity, so don't discard the return type!
 
 - `[js]block.spawnLightning()`
 - `[js]block.spawnLightning(isEffectOnly)`
@@ -200,4 +200,4 @@ Will get an empty list if the block is not on a server-side world.
   - Results in the specified `[js]item` being popped as an item entity from the specified side from the location of the block.
 
 - `[js]block.toBlockStateString()`
-  - **Returns**: The block's state as a string, with syntax being the same as one used in [`/setblock` or `/fill`](https://minecraft.wiki/w/Argument_types#minecraft:block_state).
+  - **Return value**: The block's state as a string, with syntax being the same as one used in [`/setblock` or `/fill`](https://minecraft.wiki/w/Argument_types#minecraft:block_state).

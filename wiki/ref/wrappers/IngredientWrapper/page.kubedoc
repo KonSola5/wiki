@@ -11,7 +11,7 @@ Ingredient.of(ingredient)
 ```
 **Parameters**
 - `[js]ingredient`: An [[/concepts/ingredient|`Ingredient`]]. Like with any other place that expects an `Ingredient`, the argument will be converted to `Ingredient` if possible.
-**Returns**
+**Return value**
 A new [[/concepts/ingredient|`Ingredient`]].
 
 ---
@@ -22,7 +22,7 @@ Ingredient.of(ingredient, count)
 **Parameters**
 - `[js]ingredient`: An [[/concepts/ingredient|Ingredient]]. Like with any other place that expects an `Ingredient`, the argument will be converted to `Ingredient` if possible.
 - `[js]count`: An integer, representing the size of the ingredient.
-**Returns**
+**Return value**
 A new [[/concepts/ingredient|SizedIngredient]] with the specified `count` set.
 
 ---
@@ -37,7 +37,7 @@ Ingredient.withData(itemSet, componentFilter, strict)
 - `[js]itemSet`: a [[/ref/wrappers/HolderWrapper|HolderSet]] of items. See [[/ref/wrappers/HolderWrapper|here]] for a list of possible conversions.
 - `[js]componentFilter`: A [[/concepts/data-components|DataComponentMap]] which acts as a component filter. May be also a string or a JS object: See [[/concepts/data-components|here]] for details.
 - `[js]strict` {optional}: Whether the component filter is strict. Defaults to `[js]false` if not provided.
-**Returns**
+**Return value**
 A new [[/concepts/ingredient|Ingredient]] that accepts the given set of items under the given component filter.
 
 ---
@@ -53,7 +53,7 @@ Gets the first item stack that matches the ingredient. Equivalent to `[js]ingred
 **Parameters**
 - `[js]ingredient`: An [[/concepts/ingredient|Ingredient]]. Like with any other place that expects an `Ingredient`, the argument will be converted to `Ingredient` if possible.
 
-**Returns**
+**Return value**
 The first [[/concepts/item-stack|`ItemStack`]] matching the ingredient.
 
 ---
@@ -76,7 +76,7 @@ Ingredient.isIngredient(object)
 **Parameters**
 - `[js]object`: Any object.
 
-**Returns**
+**Return value**
 `[js]true` if `object` is instance of the `Ingredient` class, `[js]false` otherwise.
 
 ---
@@ -90,7 +90,7 @@ Ingredient.isIngredientLike(object)
 **Parameters**
 - `[js]object`: Any object.
 
-**Returns**
+**Return value**
 `[js]true` if `object` is instance of either `Ingredient`, `SizedIngredient` or `ItemStack` class, `[js]false` otherwise.
 
 ---
@@ -106,7 +106,7 @@ Ingredient.tagKeyOf(ingredient)
 **Parameters**
 - `[js]ingredient`: An [[/concepts/ingredient|`Ingredient`]]. Like with any other place that expects an `Ingredient`, the argument will be converted to `Ingredient` if possible.
 
-**Returns**
+**Return value**
 If the ingredient:
 - isn't a custom ingredient (that is - it represents items or lists of items),
 - contains only one value,
@@ -125,7 +125,7 @@ Ingredient.containsAnyTag(ingredient)
 **Parameters**
 - `[js]ingredient`: An [[/concepts/ingredient|`Ingredient`]]. Like with any other place that expects an `Ingredient`, the argument will be converted to `Ingredient` if possible.
 
-**Returns**
+**Return value**
 `[js]true` if the ingredient is not custom (that is - it represents items or lists of items) and contains a tag value, `[js]false` otherwise.
 
 ---
@@ -147,7 +147,7 @@ Parses a JSON object into a potential Ingredient, according to Minecraft's own c
 **Parameters**
 - `[js]json`: A `JsonElement`. Can be also a JS object or array (?).
 
-**Returns**
+**Return value**
 A `DataResult` that potentially contains an `Ingredient`.
 This is one of the ways an `Ingredient` can be obtained from the data result:
 
@@ -170,7 +170,7 @@ Parses a string into a potential Ingredient, according to KubeJS' string type wr
 **Parameters**
 - `[js]string`: A string to parse.
 
-**Returns**
+**Return value**
 A `DataResult` that potentially contains an `Ingredient`.
 This is one of the ways an `Ingredient` can be obtained from the data result:
 

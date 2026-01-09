@@ -12,7 +12,7 @@ Java.loadClass(className)
 **Parameters**
 - `[js]className`: A string representing a fully qualified class name - that is, a name of a class prefixed with a name of a package the class is in.
 
-**Returns**
+**Return value**
 A reference to a Java class.
 To learn, how to use such reference, see [[/ref/java/class|here]].
 
@@ -30,7 +30,7 @@ Java.tryloadClass(className)
 **Parameters**
 - `[js]className`: A string representing a fully qualified class name - that is, a name of a class prefixed with a name of a package the class is in.
 
-**Returns**
+**Return value**
 A reference to a Java class, or `[js]null` if the provided class name is not allowed by the class filter or not found.
 To learn, how to use such reference, see [[/ref/java/class|here]].
 
@@ -48,7 +48,7 @@ Casts `[js]object` to the target type of `[js]theClass`. Use this in situations,
 - `[js]theClass`: A reference to a Java class to cast the object to.
 - `[js]object`: Any Java object.
 
-**Returns**
+**Return value**
 - The `[js]object` cast to `theClass`.
 
 ---
@@ -64,7 +64,7 @@ Creates a custom `ConsoleJS` instance that allows for logging under a custom nam
 **Parameters**
 - `[js]name`: A name of the console.
 
-**Returns**
+**Return value**
 - The new `ConsoleJS` instance.
 This instance can be used just like `console` in global scope, but logs created by that console will bear the custom name.
 
@@ -98,7 +98,7 @@ Java.makeFunctionProxy(targetClassTypeInfo, theFunction)
 - `[js]targetClassTypeInfo`: A `TypeInfo` implementation that implements `asClass()` abstract method which returns the target interface class.
 - `[js]theFunction`: The JS function.
 
-**Returns**
+**Return value**
 The function wrapped into an implementation of a functional interface.
 
 ---
@@ -117,7 +117,7 @@ Java.mergeRecord(originalRecord, mergeMap)
 - `[js]originalRecord`: A `Record` that serves as a base.
 - `[js]mergeMap`: A Java `Map` with string keys and any values to merge with `originalRecord`. It may be a JS object.
 
-**Returns**
+**Return value**
 The `[js]originalRecord`.
 
 ---

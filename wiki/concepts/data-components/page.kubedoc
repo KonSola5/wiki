@@ -22,19 +22,19 @@ In the following examples, `components` will refer to the DataComponentMap.
 
 - `[js]components.get(type)`
   - `type` - A component type. It can be a string representing a type, for example `[js]'minecraft:lore'`.
-  - **Returns**: Value associated with the component type.
+  - **Return value**: Value associated with the component type.
 - `[js]components.has(type)`
   - `type` - A component type. It can be a string representing a type, for example `[js]'minecraft:lore'`.
-  - **Returns**: `true` is the component has data associated with a type, `false` otherwise.
+  - **Return value**: `true` is the component has data associated with a type, `false` otherwise.
 - `[js]components.isEmpty()`
-  - **Returns**: `true` is the component contains no data, `false` otherwise.
+  - **Return value**: `true` is the component contains no data, `false` otherwise.
 >>>info
 Also available as a **read-only** bean: `components.empty`.
 <<<
 - `[js]components.keySet()`
-  - **Returns**: A set of all types (as implementations of `DataComponentType` interface) in the component map.
+  - **Return value**: A set of all types (as implementations of `DataComponentType` interface) in the component map.
 - `[js]components.size()`
-  - **Returns**: The amount of keys in the component map.
+  - **Return value**: The amount of keys in the component map.
 
 Just like other read-only maps, `components` also contain `filter` and `forEach` methods. 
 

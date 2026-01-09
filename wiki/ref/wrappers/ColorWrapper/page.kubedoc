@@ -129,7 +129,7 @@ By default, these are the colors present in a map:
 | Test table        | Test                     |
 | One               | two                      |
 | <#transparent>    | `#00000000`              |
-| <#light-blue-dye> | [bg=#9AC0CD] `#FF9AC0CD` |
+| <#light-blue-dye> |[bg=#9AC0CD] `#FF9AC0CD`  |
 
 | Color names       | Corresponding color     |
 | <#transparent>    | `#00000000`             |

@@ -383,4 +383,4 @@ In vanilla, only [[/concepts/entity/Player|`Player`]] instances may be spectator
 
 [Test](#getportalcooldown-setportalcooldown)
 
-[Test2](/wiki/ref/wrappers/JavaWrapper)
+[Test2](/wiki/ref/wrappers/JavaWrapper#createconsole)

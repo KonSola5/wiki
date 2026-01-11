@@ -9,7 +9,7 @@ As it's abstract, it cannot be directly constructed. Other entity classes extend
 
 # Instance methods
 
->>> note
+>>> info
 Only a select subset of all public methods will be documented here.
 <<<
 
@@ -19,7 +19,7 @@ In the following examples, `[js]entity` will be referring to the instance of `En
 
 ### `getEntityType`
 
->>> note
+>>> info
 This method has its name changed from vanilla: `getType`.
 In KubeJS, [[ref/utils/EntityKJS|`getType`]] refers to a more script-friendly method that returns the entity's ID as string. It comes from the [[ref/utils/EntityKJS|`EntityKJS`]] interface.
 <<<

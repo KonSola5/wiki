@@ -382,3 +382,5 @@ entity.spectator // read-only bean
 In vanilla, only [[/concepts/entity/Player|`Player`]] instances may be spectators, so for any other entity this will be `[js]false`.
 
 [Test](#getportalcooldown-setportalcooldown)
+
+[Test2](/wiki/ref/wrappers/JavaWrapper)

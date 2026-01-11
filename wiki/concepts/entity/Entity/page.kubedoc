@@ -1,0 +1,383 @@
+`Entity` is an abstract class that serves as a base of all entity behavior.
+As it's abstract, it cannot be directly constructed. Other entity classes extend from this class.
+
+# How to get Entities
+
+`Entity` objects are usually obtained as a result of either:
+- spawning an entity, for example via the `[js]spawnEntity()` instance method on [[/concepts/level/Level|`Level`]] or `[js]createEntity()` instance method on [[/concepts/block/LevelBlock|`LevelBlock`]],
+- searching for an entity in world, for example via `[js]getEntities()` instance method on [[/concepts/level/Level|`Level`]] or `[js]getPlayersInRange()` instance method on [[/concepts/block/LevelBlock|`LevelBlock`]].
+
+# Instance methods
+
+>>> note
+Only a select subset of all public methods will be documented here.
+<<<
+
+In the following examples, `[js]entity` will be referring to the instance of `Entity`.
+
+## Identification
+
+### `getEntityType`
+
+>>> note
+This method has its name changed from vanilla: `getType`.
+In KubeJS, [[ref/utils/EntityKJS|`getType`]] refers to a more script-friendly method that returns the entity's ID as string. It comes from the [[ref/utils/EntityKJS|`EntityKJS`]] interface.
+<<<
+
+```js
+entity.getEntityType()
+entity.entityType // read-only bean
+```
+
+**Return value**
+An `EntityType` of the item. 
+
+---
+
+### `getTags`
+
+```js
+entity.getTags()
+entity.tags // read-only bean
+```
+
+**Return value**
+A [[ref/java/set|Set]] of entity tags, as strings. 
+
+---
+
+### `addTag`
+
+```js
+entity.addTag(tag)
+```
+
+Adds a specified `tag` to the entity.
+
+**Parameters**
+
+- `[js]tag`: The entity tag to add.
+
+**Return value**
+None (`[js]undefined`). 
+
+---
+
+### `removeTag`
+
+```js
+entity.removeTag(tag)
+```
+
+Removes a specified `tag` from the entity.
+
+**Parameters**
+
+- `[js]tag`: The entity tag to remove.
+
+**Return value**
+`[js]true` if the tag was in set of entity tags, and thus has been successfully removed, `[js]false` otherwise.
+
+---
+
+## Position
+
+### `setPos`
+
+```js
+entity.setPos(x, y, z)
+```
+
+Sets the position of the entity (x, y, z).
+
+**Parameters**
+- `[js]x`, `[js]y`, `[js]z`: The new coordinates of the entity. 
+**Return value**
+None (`[js]undefined`).
+
+---
+
+### `turn`
+
+```js
+entity.turn(pitch, yaw)
+```
+
+Sets the rotation of the entity (pitch, yaw).
+
+**Parameters**
+- `[js]pitch`: The new pitch of the entity, in degrees. Will be clamped to `<-90, 90>` range.
+- `[js]yaw`: The new yaw of the entity, in degrees.
+
+**Return value**
+None (`[js]undefined`).
+
+---
+
+### `move`
+
+```js
+entity.move(moverType, movementVector)
+```
+
+Tries to move the entity by the specified vector, applying various in-world physics such as being stuck in block, catching fire, extinguishing fire, swimming, vibrations, etc.
+
+**Parameters**
+- `[js]moverType`: What type of mover caused the movement. It may be a string representing a mover type, that is: one of `[js]'piston'`, `[js]'player'`, `[js]'self'`, `[js]'shulker'`, `[js]'shulker_box'`.
+- `[js]movementVector`: A [[/ref/utils/Vec3|`Vec3`]] which defines the movement vector. It may be an array with three elements specifying respectively x, y and z component, for example `[js]\[0, 1.5, 1\]`.
+
+**Return value**
+None (`[js]undefined`).
+
+---
+
+## Interaction
+
+### `isColliding`
+
+```js
+entity.isColliding(blockPos, blockState)
+```
+
+Checks, whether the entity is colliding with a given block.
+
+**Parameters**
+- `blockPos` - The position of the block as `BlockPos`. It may be a 3-element array of integers containing x, y and z coordinates, for example `[js]\[0, 64, 0\]`.
+- `blockState` - The [[/concepts/block/BlockState|`BlockState`]] to check. It may be a string representing a block state, for example `[js]'minecraft:oak_log\[axis=x\]'`.
+
+**Return value**
+`[js]true` if the entity is colliding with a block, `[js]false` otherwise.
+
+---
+
+### `isFree`
+
+```js
+entity.isFree(x, y, z)
+```
+
+Checks, whether the entity is free to move by given x, y and z.
+
+**Parameters**
+- `[js]x`, `[js]y`, `[js]z`: The coordinates of the movement vector - that is, the current position of `entity` with `[js]x`, `[js]y`, `[js]z` added will be tested for collision. 
+
+**Return value**
+`[js]true` if the entity is free to move there, `[js]false` if it isn't.
+
+---
+
+### `onGround`
+
+```js
+entity.onGround()
+```
+
+Checks, whether the entity is on the ground.
+
+**Return value**
+`[js]true` if the entity is on the ground, `[js]false` if it isn't.
+
+---
+
+### `getPortalCooldown`, `setPortalCooldown`
+```js
+entity.getPortalCooldown()
+
+entity.setPortalCooldown()
+entity.setPortalCooldown(cooldown)
+
+entity.portalCooldown // bean
+```
+
+Sets or gets the entity portal cooldown.
+
+**Setter parameter**
+- `cooldown` {optional} - The cooldown in ticks. Defaults to entity's dimension changing delay (`[js]300` in case of most entities, `[js]10` in case of [[concepts/entity/ServerPlayer|`ServerPlayer`]] instances) if not provided.
+Defaults to 
+**Getter return value**
+The entity's portal cooldown, in ticks.
+
+---
+
+### `isOnPortalCooldown`
+
+```js
+entity.isOnPortalCooldown()
+entity.onPortalCooldown // read-only bean
+```
+
+Checks, whether the entity is on portal cooldown.
+
+**Return value**
+`[js]true` if the entity is on portal cooldown, `[js]false` if it isn't.
+
+---
+
+## Relation
+
+### `closerThan`
+
+```js
+entity.closerThan(otherEntity, distance)
+entity.closerThan(otherEntity, horizontalDistance, verticalDistance)
+```
+
+Checks, whether `[js]otherEntity` is within a cylinder-shaped area of `[js]horizontalDistance` radius and `[js]2 * verticalDistance` height centered at the `[js]entity`.
+
+**Parameters**
+- `[js]otherEntity`: The `Entity` to check.
+- `[js]distance`: If there are no more arguments past this one, specifies both the horizontal and vertical distance to search (in blocks).
+- `[js]horizontalDistance`: The horizontal distance (that is: radius of the cylinder, in blocks) to search from the `entity`.
+- `[js]verticalDistance`: The vertical distance (that is: half of the cylinder's height, in blocks) to search from the `entity`.
+
+**Return value**
+`[js]true` if `[js]otherEntity` is within range, `[js]false` otherwise.
+
+---
+
+## Damage
+
+### `kill`
+
+```js
+entity.kill()
+```
+
+Kills an entity, removing it from the world.
+In other words, it acts as a `/kill` command.
+
+---
+
+**Return value**
+None (`[js]undefined`). 
+
+---
+
+### `lavaHurt`
+
+```js
+entity.lavaHurt()
+```
+
+If the entity isn't fire-resistant, it sets the entity on fire for 15 seconds and deals 4 damage, just like lava does.
+
+Note that classes inheriting from `Entity` may change this behavior for their entity.
+
+**Return value**
+None (`[js]undefined`).
+
+---
+
+### `igniteForSeconds`
+
+```js
+entity.igniteForSeconds(seconds)
+```
+
+Sets the entity on fire for the specified amount of seconds.
+
+**Return value**
+None (`[js]undefined`). 
+
+---
+
+### `igniteForTicks`
+
+```js
+entity.igniteForTicks(ticks)
+```
+
+Sets the entity on fire for the specified amount of ticks.
+
+**Return value**
+None (`[js]undefined`). 
+
+---
+
+### `getRemainingFireTicks`, `setRemainingFireTicks`
+```js
+entity.getRemainingFireTicks()
+
+entity.setRemainingFireTicks(ticks)
+
+entity.remainingFireTicks // bean
+```
+
+Sets or gets the entity's remaining ticks of being on fire.
+
+**Setter parameter**
+- `ticks`: The remaining fire ticks to set.
+Defaults to 
+**Getter return value**
+The entity's remaining fire ticks.
+
+---
+
+### `clearFire`
+
+```js
+entity.clearFire()
+```
+
+Sets the entity's remaining fire ticks to 0, effectively extinguishing it with no other side effects.
+
+**Return value**
+None (`[js]undefined`). 
+
+---
+
+### `extinguishFire`
+
+```js
+entity.extinguishFire()
+```
+
+Sets the entity's remaining fire ticks to 0, effectively extinguishing it, and plays the fire extinguish at the position of the entity.
+
+**Return value**
+None (`[js]undefined`). 
+
+---
+
+## Vehicle related
+
+### `unRide`
+```js
+entity.unRide()
+```
+
+If the entity is a vehicle, it ejects all of its passengers.
+If the entity is a passenger, it dismounts from the vehicle.
+
+**Return value**
+None (`[js]undefined`). 
+
+
+## Scoreboard related
+
+### `getTeamColor`
+
+```js
+entity.getTeamColor()
+entity.teamColor // read-only bean
+```
+
+**Parameters**
+- `blockPos` - The position of the block as `BlockPos`. It may be a 3-element array of integers containing x, y and z coordinates, for example `[js]\[0, 64, 0\]`.
+- `blockState` - The [[/concepts/block/BlockState|`BlockState`]] to check. It may be a string representing a block state, for example `[js]'minecraft:oak_log\[axis=x\]'`.
+
+**Return value**
+The team color as a packed integer, in `0xRRGGBB` format.
+
+## Other
+
+### `isSpectator`
+
+```js
+entity.isSpectator()
+entity.spectator // read-only bean
+```
+
+**Return value**
+`[js]true` if the entity is a spectator, `[js]false` otherwise.
+In vanilla, only [[/concepts/entity/Player|`Player`]] instances may be spectators, so for any other entity this will be `[js]false`.

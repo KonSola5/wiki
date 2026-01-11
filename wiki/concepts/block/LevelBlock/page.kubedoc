@@ -4,7 +4,7 @@
 
 `LevelBlock`s are usually obtained via block-getting methods on `Level` (object representing the Minecraft world), such as `[js]level.getBlock(x, y, z)`.
 
-# Useful LevelBlock methods
+# Instance methods
 
 In the following examples, `[js]block` will refer to the instance of `LevelBlock`.
 
@@ -85,13 +85,13 @@ Gets or sets the BlockState of the block.
   - `[js]updateFlags` {optional}: Block update flags. They are a bit map of update properties.
 
 - `[js]block.setBlockState(blockState, updateFlags)`
-  - `[js]blockState`: The BlockState to set the `block` to. It may be a string representing a block state, for example `[js]'minecraft:oak_log\[axis=x\]'`
+  - `[js]blockState`: The [[/concepts/block/BlockState|`BlockState`]] to set the `block` to. It may be a string representing a block state, for example `[js]'minecraft:oak_log\[axis=x\]'`
   - `[js]updateFlags` {optional}: Block update flags. They are a bit map of update properties.
 
 ### Getters
 
 >>> #players-in-radius-note
-Gets a list of all player entities in an 8-block radius, excluding fake players.
+Gets a list of all player entities (as [[/concepts/entity/Entity|`Entity`]] instances) in an 8-block radius, excluding fake players.
 **Note**: `getPlayersInRadius` also has an overload with customizable radius, see below this table.
 <<<
 >>> #inventory-note
@@ -154,8 +154,8 @@ Will get an empty list if the block is not on a server-side world.
 - `[js]block.getPlayersInRadius()`
 - `[js]block.getPlayersInRadius(radius)`
   - `[js]radius` {optional}: The radius around the `block` to search players for. Defaults to `8` if not provided.
-  - **Return value**: All players found (as a list of [[/concepts/entity|Entities]]), excluding fake players.
-  - ==Guarantee==: Entities in this list are guaranteed to be [[/concepts/player|Players]], so documentation for [[/concepts/player|Player]] applies to those entities as well.
+  - **Return value**: All players found (as a list of [[/concepts/entity/Entity|`Entity`]] instances), excluding fake players.
+  - ==Guarantee==: Entities in this list are guaranteed to be [[/concepts/entity/Player|`Player`]] instances, so documentation for [[/concepts/entity/Player|Player]] applies to those entities as well.
 
 ### Other methods
 
@@ -176,7 +176,7 @@ Will get an empty list if the block is not on a server-side world.
 
 - `[js]block.createEntity(entityType)`
   - `[js]entityType`: The type of entity to create. It may be a string representing an entity, for example `[js]'minecraft:creeper'`
-  - **Return value**: An new [[/concepts/entity|`Entity`]] object with its position set to the position of the `block` (not its center!). Of course, you still need to spawn the entity, so don't discard the return type!
+  - **Return value**: An new [[/concepts/entity/Entity|`Entity`]] object with its position set to the position of the `block` (not its center!). Of course, you still need to spawn the entity, so don't discard the return type!
 
 - `[js]block.spawnLightning()`
 - `[js]block.spawnLightning(isEffectOnly)`

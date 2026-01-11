@@ -5,7 +5,7 @@ This class is a [[/ref/records|record]]. If you want to learn, how to use them i
 **ExplosionProperties** define explosion properties. Nothing to write home about here.
 
 >>> #source-type
-[[/concepts/entity|`Entity`]]
+[[/concepts/entity/Entity|`Entity`]]
 <<<
 >>> #source-description
 Specifies the source of the explosion's damage (for example, the player who lit the TNT).

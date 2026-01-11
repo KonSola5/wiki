@@ -100,7 +100,7 @@ Color.MAP
 ```
 
 **Value**
-A `HashMap` with keys being strings corresponding to color value, and values being [[/ref/utils/KubeColor|`KubeColor`]] implementations.
+A [[/ref/java/Map|`HashMap`]] with keys being strings corresponding to color value, and values being [[/ref/utils/KubeColor|`KubeColor`]] implementations.
 The keys are also the same strings that can be type wrapped into colors.
 
 >>> #corresponding-color
@@ -246,7 +246,7 @@ Color.TEXT
 ```
 
 **Value**
-A `HashMap` with keys being strings corresponding to color value, and values being `ChatFormatting` enumerations.
+A [[/ref/java/Map|`HashMap`]] with keys being strings corresponding to color value, and values being `ChatFormatting` enumerations.
 Note that `ChatFormatting` implements the [[/ref/utils/KubeColor|`KubeColor`]] interface, so colors from `ChatFormatting` may be used in place of colors.
 
 ---
@@ -258,7 +258,7 @@ Color.DYE
 ```
 
 **Value**
-A `HashMap` with keys being strings corresponding to color value, and values being `DyeColor` enumerations.
+A [[/ref/java/Map|`HashMap`]] with keys being strings corresponding to color value, and values being `DyeColor` enumerations.
 Note that `DyeColor` implements the [[/ref/utils/KubeColor|`KubeColor`]] interface, so colors from `DyeColor` may be used in place of colors.
 
 ---

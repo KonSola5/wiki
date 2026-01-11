@@ -4,7 +4,7 @@ KubeJS injects an implementation of `KubeColor` into the aforementioned classes,
 
 # Instance methods
 
-The following examples will refer to the class implementing `KubeColor` as `[js]color`.
+The following examples will refer to the instance of a class implementing `KubeColor` as `[js]color`.
 
 ### `getArgb`
 
